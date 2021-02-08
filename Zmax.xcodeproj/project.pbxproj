@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		783A5C6125D0DF010076C9DB /* ZMAXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5C6025D0DF010076C9DB /* ZMAXUserDefaults.m */; };
+		783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5C7325D0F1D30076C9DB /* ZMAXAppInitialization.m */; };
+		78422A7025A320820027D881 /* ZMAXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A6F25A320820027D881 /* ZMAXSettingViewController.m */; };
+		78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A7825B417A00027D881 /* ZMAXSettingCollectionViewCell.m */; };
+		78422A8125B460060027D881 /* ZMAXPromptPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */; };
+		787DF170259C8907002A731B /* ZMAXBaseLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 787DF16F259C8907002A731B /* ZMAXBaseLib.m */; };
+		78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22A2599CA5600E0CE10 /* AppDelegate.m */; };
+		78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22D2599CA5600E0CE10 /* SceneDelegate.m */; };
+		78A1E2362599CA5600E0CE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A1E2352599CA5600E0CE10 /* Assets.xcassets */; };
+		78A1E2392599CA5600E0CE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A1E2372599CA5600E0CE10 /* LaunchScreen.storyboard */; };
+		78A1E23C2599CA5600E0CE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E23B2599CA5600E0CE10 /* main.m */; };
+		78A1E2462599CA5700E0CE10 /* ZmaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2452599CA5700E0CE10 /* ZmaxTests.m */; };
+		78A1E2512599CA5700E0CE10 /* ZmaxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2502599CA5700E0CE10 /* ZmaxUITests.m */; };
+		78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */; };
+		78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53078259DC35100D8C140 /* ZMAXTabBarView.m */; };
+		78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5307E259F418300D8C140 /* ZMAXTabBarGeneralIconView.m */; };
+		78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53084259F41FF00D8C140 /* ZMAXTabBarImageIconView.m */; };
+		78D5308B25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5308A25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m */; };
+		78D5309925A092A600D8C140 /* ZMAXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5309825A092A600D8C140 /* ZMAXHomeViewController.m */; };
+		78D5309F25A092BB00D8C140 /* ZMAXFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5309E25A092BB00D8C140 /* ZMAXFunctionViewController.m */; };
+		78D530A525A092DD00D8C140 /* ZMAXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D530A425A092DD00D8C140 /* ZMAXRecommendViewController.m */; };
+		78D530AB25A092EB00D8C140 /* ZMAXMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D530AA25A092EB00D8C140 /* ZMAXMessageViewController.m */; };
+		78D530B125A092F900D8C140 /* ZMAXMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D530B025A092F900D8C140 /* ZMAXMineViewController.m */; };
+		78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D530B725A0A5D200D8C140 /* ZMAXNavigationBarView.m */; };
+		78EE6120259B61DA00EBC9CE /* ZMAXUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE611F259B61DA00EBC9CE /* ZMAXUIColor.m */; };
+		78EE6125259B640900EBC9CE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78EE6124259B640900EBC9CE /* Colors.xcassets */; };
+		C4913F0BB5158F01E3A38DED /* libPods-Zmax.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDA9E9A55EED96EC71F884F /* libPods-Zmax.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78A1E2422599CA5700E0CE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78A1E21E2599CA5600E0CE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78A1E2252599CA5600E0CE10;
+			remoteInfo = Zmax;
+		};
+		78A1E24D2599CA5700E0CE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78A1E21E2599CA5600E0CE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78A1E2252599CA5600E0CE10;
+			remoteInfo = Zmax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		783A5C5F25D0DF010076C9DB /* ZMAXUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXUserDefaults.h; sourceTree = "<group>"; };
+		783A5C6025D0DF010076C9DB /* ZMAXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXUserDefaults.m; sourceTree = "<group>"; };
+		783A5C7225D0F1D30076C9DB /* ZMAXAppInitialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXAppInitialization.h; sourceTree = "<group>"; };
+		783A5C7325D0F1D30076C9DB /* ZMAXAppInitialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXAppInitialization.m; sourceTree = "<group>"; };
+		78422A6E25A320820027D881 /* ZMAXSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSettingViewController.h; sourceTree = "<group>"; };
+		78422A6F25A320820027D881 /* ZMAXSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSettingViewController.m; sourceTree = "<group>"; };
+		78422A7725B417A00027D881 /* ZMAXSettingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSettingCollectionViewCell.h; sourceTree = "<group>"; };
+		78422A7825B417A00027D881 /* ZMAXSettingCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSettingCollectionViewCell.m; sourceTree = "<group>"; };
+		78422A7F25B460060027D881 /* ZMAXPromptPopupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXPromptPopupViewController.h; sourceTree = "<group>"; };
+		78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXPromptPopupViewController.m; sourceTree = "<group>"; };
+		787DF16E259C8907002A731B /* ZMAXBaseLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXBaseLib.h; sourceTree = "<group>"; };
+		787DF16F259C8907002A731B /* ZMAXBaseLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXBaseLib.m; sourceTree = "<group>"; };
+		78A1E2262599CA5600E0CE10 /* Zmax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zmax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A1E2292599CA5600E0CE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78A1E22A2599CA5600E0CE10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78A1E22C2599CA5600E0CE10 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		78A1E22D2599CA5600E0CE10 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		78A1E2352599CA5600E0CE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78A1E2382599CA5600E0CE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78A1E23A2599CA5600E0CE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A1E23B2599CA5600E0CE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78A1E2412599CA5700E0CE10 /* ZmaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZmaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A1E2452599CA5700E0CE10 /* ZmaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZmaxTests.m; sourceTree = "<group>"; };
+		78A1E2472599CA5700E0CE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A1E24C2599CA5700E0CE10 /* ZmaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZmaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A1E2502599CA5700E0CE10 /* ZmaxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZmaxUITests.m; sourceTree = "<group>"; };
+		78A1E2522599CA5700E0CE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A1E2842599F35100E0CE10 /* ZMAXTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarViewController.h; sourceTree = "<group>"; };
+		78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarViewController.m; sourceTree = "<group>"; };
+		78D53077259DC35100D8C140 /* ZMAXTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarView.h; sourceTree = "<group>"; };
+		78D53078259DC35100D8C140 /* ZMAXTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarView.m; sourceTree = "<group>"; };
+		78D5307D259F418300D8C140 /* ZMAXTabBarGeneralIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarGeneralIconView.h; sourceTree = "<group>"; };
+		78D5307E259F418300D8C140 /* ZMAXTabBarGeneralIconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarGeneralIconView.m; sourceTree = "<group>"; };
+		78D53083259F41FF00D8C140 /* ZMAXTabBarImageIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarImageIconView.h; sourceTree = "<group>"; };
+		78D53084259F41FF00D8C140 /* ZMAXTabBarImageIconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarImageIconView.m; sourceTree = "<group>"; };
+		78D5308925A05BEF00D8C140 /* ZMAXTabBarBaseIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarBaseIconView.h; sourceTree = "<group>"; };
+		78D5308A25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarBaseIconView.m; sourceTree = "<group>"; };
+		78D5309725A092A600D8C140 /* ZMAXHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXHomeViewController.h; sourceTree = "<group>"; };
+		78D5309825A092A600D8C140 /* ZMAXHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXHomeViewController.m; sourceTree = "<group>"; };
+		78D5309D25A092BB00D8C140 /* ZMAXFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXFunctionViewController.h; sourceTree = "<group>"; };
+		78D5309E25A092BB00D8C140 /* ZMAXFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXFunctionViewController.m; sourceTree = "<group>"; };
+		78D530A325A092DD00D8C140 /* ZMAXRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXRecommendViewController.h; sourceTree = "<group>"; };
+		78D530A425A092DD00D8C140 /* ZMAXRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXRecommendViewController.m; sourceTree = "<group>"; };
+		78D530A925A092EB00D8C140 /* ZMAXMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXMessageViewController.h; sourceTree = "<group>"; };
+		78D530AA25A092EB00D8C140 /* ZMAXMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMessageViewController.m; sourceTree = "<group>"; };
+		78D530AF25A092F900D8C140 /* ZMAXMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXMineViewController.h; sourceTree = "<group>"; };
+		78D530B025A092F900D8C140 /* ZMAXMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMineViewController.m; sourceTree = "<group>"; };
+		78D530B625A0A5D200D8C140 /* ZMAXNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXNavigationBarView.h; sourceTree = "<group>"; };
+		78D530B725A0A5D200D8C140 /* ZMAXNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXNavigationBarView.m; sourceTree = "<group>"; };
+		78EE611E259B61DA00EBC9CE /* ZMAXUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXUIColor.h; sourceTree = "<group>"; };
+		78EE611F259B61DA00EBC9CE /* ZMAXUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXUIColor.m; sourceTree = "<group>"; };
+		78EE6124259B640900EBC9CE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		884E8B81E3B5B2313E6ED199 /* Pods-Zmax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zmax.debug.xcconfig"; path = "Target Support Files/Pods-Zmax/Pods-Zmax.debug.xcconfig"; sourceTree = "<group>"; };
+		BEDA9E9A55EED96EC71F884F /* libPods-Zmax.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zmax.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF236983E7531DC1B6767DE9 /* Pods-Zmax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zmax.release.xcconfig"; path = "Target Support Files/Pods-Zmax/Pods-Zmax.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78A1E2232599CA5600E0CE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4913F0BB5158F01E3A38DED /* libPods-Zmax.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E23E2599CA5700E0CE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E2492599CA5700E0CE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		783A5C5E25D0DED50076C9DB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				783A5C5F25D0DF010076C9DB /* ZMAXUserDefaults.h */,
+				783A5C6025D0DF010076C9DB /* ZMAXUserDefaults.m */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		783A5C7125D0F1BB0076C9DB /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
+				783A5C7225D0F1D30076C9DB /* ZMAXAppInitialization.h */,
+				783A5C7325D0F1D30076C9DB /* ZMAXAppInitialization.m */,
+			);
+			path = Initialization;
+			sourceTree = "<group>";
+		};
+		78422A6D25A3206B0027D881 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				78422A6E25A320820027D881 /* ZMAXSettingViewController.h */,
+				78422A6F25A320820027D881 /* ZMAXSettingViewController.m */,
+				78422A7725B417A00027D881 /* ZMAXSettingCollectionViewCell.h */,
+				78422A7825B417A00027D881 /* ZMAXSettingCollectionViewCell.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		78422A7D25B45FAB0027D881 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				78422A7E25B45FC70027D881 /* PromptPopup */,
+				78D530B525A0A4E700D8C140 /* NavigationBar */,
+				78944B47259B2D6C002ADC86 /* TabBar */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		78422A7E25B45FC70027D881 /* PromptPopup */ = {
+			isa = PBXGroup;
+			children = (
+				78422A7F25B460060027D881 /* ZMAXPromptPopupViewController.h */,
+				78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */,
+			);
+			path = PromptPopup;
+			sourceTree = "<group>";
+		};
+		78944B47259B2D6C002ADC86 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2842599F35100E0CE10 /* ZMAXTabBarViewController.h */,
+				78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */,
+				78D53077259DC35100D8C140 /* ZMAXTabBarView.h */,
+				78D53078259DC35100D8C140 /* ZMAXTabBarView.m */,
+				78D5307D259F418300D8C140 /* ZMAXTabBarGeneralIconView.h */,
+				78D5307E259F418300D8C140 /* ZMAXTabBarGeneralIconView.m */,
+				78D53083259F41FF00D8C140 /* ZMAXTabBarImageIconView.h */,
+				78D53084259F41FF00D8C140 /* ZMAXTabBarImageIconView.m */,
+				78D5308925A05BEF00D8C140 /* ZMAXTabBarBaseIconView.h */,
+				78D5308A25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		78944B48259B2D7E002ADC86 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				78BD4D50259C8A2A00913B95 /* BaseLib */,
+				78944B49259B2E5C002ADC86 /* Color */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		78944B49259B2E5C002ADC86 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				78EE611E259B61DA00EBC9CE /* ZMAXUIColor.h */,
+				78EE611F259B61DA00EBC9CE /* ZMAXUIColor.m */,
+				78EE6124259B640900EBC9CE /* Colors.xcassets */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		78A1E21D2599CA5600E0CE10 = {
+			isa = PBXGroup;
+			children = (
+				78A1E2282599CA5600E0CE10 /* Zmax */,
+				78A1E2442599CA5700E0CE10 /* ZmaxTests */,
+				78A1E24F2599CA5700E0CE10 /* ZmaxUITests */,
+				78A1E2272599CA5600E0CE10 /* Products */,
+				92E9F147AD57FB795C0FFC10 /* Pods */,
+				FE289FFE012966311AE91510 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78A1E2272599CA5600E0CE10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2262599CA5600E0CE10 /* Zmax.app */,
+				78A1E2412599CA5700E0CE10 /* ZmaxTests.xctest */,
+				78A1E24C2599CA5700E0CE10 /* ZmaxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78A1E2282599CA5600E0CE10 /* Zmax */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E23A2599CA5600E0CE10 /* Info.plist */,
+				78A1E26C2599CEAF00E0CE10 /* Core */,
+				78A1E2652599CE5200E0CE10 /* Defult */,
+				78A1E2642599CE3F00E0CE10 /* Resources */,
+			);
+			path = Zmax;
+			sourceTree = "<group>";
+		};
+		78A1E2442599CA5700E0CE10 /* ZmaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2452599CA5700E0CE10 /* ZmaxTests.m */,
+				78A1E2472599CA5700E0CE10 /* Info.plist */,
+			);
+			path = ZmaxTests;
+			sourceTree = "<group>";
+		};
+		78A1E24F2599CA5700E0CE10 /* ZmaxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2502599CA5700E0CE10 /* ZmaxUITests.m */,
+				78A1E2522599CA5700E0CE10 /* Info.plist */,
+			);
+			path = ZmaxUITests;
+			sourceTree = "<group>";
+		};
+		78A1E2642599CE3F00E0CE10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2352599CA5600E0CE10 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		78A1E2652599CE5200E0CE10 /* Defult */ = {
+			isa = PBXGroup;
+			children = (
+				78A1E2292599CA5600E0CE10 /* AppDelegate.h */,
+				78A1E22A2599CA5600E0CE10 /* AppDelegate.m */,
+				78A1E22C2599CA5600E0CE10 /* SceneDelegate.h */,
+				78A1E22D2599CA5600E0CE10 /* SceneDelegate.m */,
+				78A1E2372599CA5600E0CE10 /* LaunchScreen.storyboard */,
+				78A1E23B2599CA5600E0CE10 /* main.m */,
+			);
+			path = Defult;
+			sourceTree = "<group>";
+		};
+		78A1E26C2599CEAF00E0CE10 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				783A5C7125D0F1BB0076C9DB /* Initialization */,
+				783A5C5E25D0DED50076C9DB /* UserDefaults */,
+				78944B48259B2D7E002ADC86 /* Base */,
+				78422A7D25B45FAB0027D881 /* CommonUI */,
+				78D5308F25A06C4300D8C140 /* Home */,
+				78D5309025A06C8500D8C140 /* Function */,
+				78D5309125A06C9300D8C140 /* Recommend */,
+				78D5309225A06C9C00D8C140 /* Message */,
+				78D5309325A06CA400D8C140 /* Mine */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		78BD4D50259C8A2A00913B95 /* BaseLib */ = {
+			isa = PBXGroup;
+			children = (
+				787DF16E259C8907002A731B /* ZMAXBaseLib.h */,
+				787DF16F259C8907002A731B /* ZMAXBaseLib.m */,
+			);
+			path = BaseLib;
+			sourceTree = "<group>";
+		};
+		78D5308F25A06C4300D8C140 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				78D5309725A092A600D8C140 /* ZMAXHomeViewController.h */,
+				78D5309825A092A600D8C140 /* ZMAXHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		78D5309025A06C8500D8C140 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				78D5309D25A092BB00D8C140 /* ZMAXFunctionViewController.h */,
+				78D5309E25A092BB00D8C140 /* ZMAXFunctionViewController.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		78D5309125A06C9300D8C140 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				78D530A325A092DD00D8C140 /* ZMAXRecommendViewController.h */,
+				78D530A425A092DD00D8C140 /* ZMAXRecommendViewController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		78D5309225A06C9C00D8C140 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				78D530A925A092EB00D8C140 /* ZMAXMessageViewController.h */,
+				78D530AA25A092EB00D8C140 /* ZMAXMessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		78D5309325A06CA400D8C140 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				78422A6D25A3206B0027D881 /* Setting */,
+				78D530AF25A092F900D8C140 /* ZMAXMineViewController.h */,
+				78D530B025A092F900D8C140 /* ZMAXMineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		78D530B525A0A4E700D8C140 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				78D530B625A0A5D200D8C140 /* ZMAXNavigationBarView.h */,
+				78D530B725A0A5D200D8C140 /* ZMAXNavigationBarView.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		92E9F147AD57FB795C0FFC10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				884E8B81E3B5B2313E6ED199 /* Pods-Zmax.debug.xcconfig */,
+				EF236983E7531DC1B6767DE9 /* Pods-Zmax.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE289FFE012966311AE91510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEDA9E9A55EED96EC71F884F /* libPods-Zmax.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78A1E2252599CA5600E0CE10 /* Zmax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A1E2552599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "Zmax" */;
+			buildPhases = (
+				4992F70A5D8BE8429263A48C /* [CP] Check Pods Manifest.lock */,
+				78A1E2222599CA5600E0CE10 /* Sources */,
+				78A1E2232599CA5600E0CE10 /* Frameworks */,
+				78A1E2242599CA5600E0CE10 /* Resources */,
+				FFC64386869F403E37C002FC /* [CP] Copy Pods Resources */,
+				B7E8F505523419BCB4689CC5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zmax;
+			productName = Zmax;
+			productReference = 78A1E2262599CA5600E0CE10 /* Zmax.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78A1E2402599CA5700E0CE10 /* ZmaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A1E2582599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "ZmaxTests" */;
+			buildPhases = (
+				78A1E23D2599CA5700E0CE10 /* Sources */,
+				78A1E23E2599CA5700E0CE10 /* Frameworks */,
+				78A1E23F2599CA5700E0CE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78A1E2432599CA5700E0CE10 /* PBXTargetDependency */,
+			);
+			name = ZmaxTests;
+			productName = ZmaxTests;
+			productReference = 78A1E2412599CA5700E0CE10 /* ZmaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78A1E24B2599CA5700E0CE10 /* ZmaxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A1E25B2599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "ZmaxUITests" */;
+			buildPhases = (
+				78A1E2482599CA5700E0CE10 /* Sources */,
+				78A1E2492599CA5700E0CE10 /* Frameworks */,
+				78A1E24A2599CA5700E0CE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78A1E24E2599CA5700E0CE10 /* PBXTargetDependency */,
+			);
+			name = ZmaxUITests;
+			productName = ZmaxUITests;
+			productReference = 78A1E24C2599CA5700E0CE10 /* ZmaxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78A1E21E2599CA5600E0CE10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					78A1E2252599CA5600E0CE10 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					78A1E2402599CA5700E0CE10 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 78A1E2252599CA5600E0CE10;
+					};
+					78A1E24B2599CA5700E0CE10 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 78A1E2252599CA5600E0CE10;
+					};
+				};
+			};
+			buildConfigurationList = 78A1E2212599CA5600E0CE10 /* Build configuration list for PBXProject "Zmax" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78A1E21D2599CA5600E0CE10;
+			productRefGroup = 78A1E2272599CA5600E0CE10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78A1E2252599CA5600E0CE10 /* Zmax */,
+				78A1E2402599CA5700E0CE10 /* ZmaxTests */,
+				78A1E24B2599CA5700E0CE10 /* ZmaxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78A1E2242599CA5600E0CE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EE6125259B640900EBC9CE /* Colors.xcassets in Resources */,
+				78A1E2392599CA5600E0CE10 /* LaunchScreen.storyboard in Resources */,
+				78A1E2362599CA5600E0CE10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E23F2599CA5700E0CE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E24A2599CA5700E0CE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4992F70A5D8BE8429263A48C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zmax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E8F505523419BCB4689CC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC64386869F403E37C002FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zmax/Pods-Zmax-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78A1E2222599CA5600E0CE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D530A525A092DD00D8C140 /* ZMAXRecommendViewController.m in Sources */,
+				78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */,
+				78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */,
+				78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */,
+				78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */,
+				78D5308B25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m in Sources */,
+				787DF170259C8907002A731B /* ZMAXBaseLib.m in Sources */,
+				78D530B125A092F900D8C140 /* ZMAXMineViewController.m in Sources */,
+				78EE6120259B61DA00EBC9CE /* ZMAXUIColor.m in Sources */,
+				78D530AB25A092EB00D8C140 /* ZMAXMessageViewController.m in Sources */,
+				78D5309925A092A600D8C140 /* ZMAXHomeViewController.m in Sources */,
+				78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */,
+				78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */,
+				78422A8125B460060027D881 /* ZMAXPromptPopupViewController.m in Sources */,
+				78D5309F25A092BB00D8C140 /* ZMAXFunctionViewController.m in Sources */,
+				783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */,
+				78A1E23C2599CA5600E0CE10 /* main.m in Sources */,
+				783A5C6125D0DF010076C9DB /* ZMAXUserDefaults.m in Sources */,
+				78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */,
+				78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */,
+				78422A7025A320820027D881 /* ZMAXSettingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E23D2599CA5700E0CE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A1E2462599CA5700E0CE10 /* ZmaxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A1E2482599CA5700E0CE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A1E2512599CA5700E0CE10 /* ZmaxUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78A1E2432599CA5700E0CE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78A1E2252599CA5600E0CE10 /* Zmax */;
+			targetProxy = 78A1E2422599CA5700E0CE10 /* PBXContainerItemProxy */;
+		};
+		78A1E24E2599CA5700E0CE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78A1E2252599CA5600E0CE10 /* Zmax */;
+			targetProxy = 78A1E24D2599CA5700E0CE10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78A1E2372599CA5600E0CE10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A1E2382599CA5600E0CE10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78A1E2532599CA5700E0CE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		78A1E2542599CA5700E0CE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78A1E2562599CA5700E0CE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 884E8B81E3B5B2313E6ED199 /* Pods-Zmax.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = Zmax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.Zmax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78A1E2572599CA5700E0CE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF236983E7531DC1B6767DE9 /* Pods-Zmax.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = Zmax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.Zmax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		78A1E2592599CA5700E0CE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = ZmaxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.ZmaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zmax.app/Zmax";
+			};
+			name = Debug;
+		};
+		78A1E25A2599CA5700E0CE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = ZmaxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.ZmaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zmax.app/Zmax";
+			};
+			name = Release;
+		};
+		78A1E25C2599CA5700E0CE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = ZmaxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.ZmaxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Zmax;
+			};
+			name = Debug;
+		};
+		78A1E25D2599CA5700E0CE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2T8TN4ZW6;
+				INFOPLIST_FILE = ZmaxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Layer.ZmaxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Zmax;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78A1E2212599CA5600E0CE10 /* Build configuration list for PBXProject "Zmax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A1E2532599CA5700E0CE10 /* Debug */,
+				78A1E2542599CA5700E0CE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A1E2552599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "Zmax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A1E2562599CA5700E0CE10 /* Debug */,
+				78A1E2572599CA5700E0CE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A1E2582599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "ZmaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A1E2592599CA5700E0CE10 /* Debug */,
+				78A1E25A2599CA5700E0CE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A1E25B2599CA5700E0CE10 /* Build configuration list for PBXNativeTarget "ZmaxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A1E25C2599CA5700E0CE10 /* Debug */,
+				78A1E25D2599CA5700E0CE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78A1E21E2599CA5600E0CE10 /* Project object */;
+}
