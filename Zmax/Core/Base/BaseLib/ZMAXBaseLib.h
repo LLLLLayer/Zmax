@@ -25,6 +25,9 @@
 #define TAB_BAR_HEIGHT 54.0
 #define NAVIGATION_BAR_HEIGHT 54.0
 
+#define GENREAL_PADDING 16.0
+#define GENREAL_RADIUS 8.0
+
 @interface ZMAXBaseLib : NSObject
 
 + (UIWindow *)getKeyWindow;

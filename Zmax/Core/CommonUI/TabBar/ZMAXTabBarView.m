@@ -111,8 +111,8 @@
 - (ZMAXTabBarImageIconView *)recommendView
 {
     if (!_recommendView) {
-        _recommendView = [[ZMAXTabBarImageIconView alloc] initWithNormalImage:[UIImage systemImageNamed:@"map"]
-                                                                selectedImage:[UIImage systemImageNamed:@"map.fill"]];
+        _recommendView = [[ZMAXTabBarImageIconView alloc] initWithNormalImage:[UIImage imageNamed:@"ZmaxIcon"]
+                                                                selectedImage:[UIImage imageNamed:@"ZmaxIcon"]];
         weakify(self);
         _recommendView.block = ^{
             strongify(weakSelf);

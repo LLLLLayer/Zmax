@@ -184,7 +184,7 @@ static const CGFloat ZMAXPromptPopupCloseIconWidth = 20.0;
 {
     if (!_popupView) {
         _popupView = [[UIView alloc] init];
-        _popupView.backgroundColor = [UIColor colorNamed:ZMAXUIColorPromptPopupBackground];
+        _popupView.backgroundColor = [UIColor colorNamed:ZMAXUIColorConstWhiteColor];
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(__handelPanPopupViewGesture:)];
         [_popupView addGestureRecognizer:panGesture];
     }

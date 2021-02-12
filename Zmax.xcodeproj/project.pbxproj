@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		783A5C6125D0DF010076C9DB /* ZMAXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5C6025D0DF010076C9DB /* ZMAXUserDefaults.m */; };
 		783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5C7325D0F1D30076C9DB /* ZMAXAppInitialization.m */; };
+		783A5C8625D11FFF0076C9DB /* ZMAXBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5C8525D11FFF0076C9DB /* ZMAXBaseNavigationController.m */; };
+		783A5CAE25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5CAD25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m */; };
+		783A5CBB25D26E2C0076C9DB /* ZMAXLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5CBA25D26E2C0076C9DB /* ZMAXLocationManager.m */; };
+		783A5CC225D2A38B0076C9DB /* ZMAXNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A5CC125D2A38B0076C9DB /* ZMAXNetwork.m */; };
 		78422A7025A320820027D881 /* ZMAXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A6F25A320820027D881 /* ZMAXSettingViewController.m */; };
 		78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A7825B417A00027D881 /* ZMAXSettingCollectionViewCell.m */; };
 		78422A8125B460060027D881 /* ZMAXPromptPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */; };
 		787DF170259C8907002A731B /* ZMAXBaseLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 787DF16F259C8907002A731B /* ZMAXBaseLib.m */; };
+		7893670825D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893670725D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m */; };
+		7893671125D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */; };
+		7893671725D6549400AD98F1 /* ZMAXHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893671625D6549400AD98F1 /* ZMAXHomeHeaderView.m */; };
 		78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22A2599CA5600E0CE10 /* AppDelegate.m */; };
 		78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22D2599CA5600E0CE10 /* SceneDelegate.m */; };
 		78A1E2362599CA5600E0CE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A1E2352599CA5600E0CE10 /* Assets.xcassets */; };
@@ -58,6 +65,14 @@
 		783A5C6025D0DF010076C9DB /* ZMAXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXUserDefaults.m; sourceTree = "<group>"; };
 		783A5C7225D0F1D30076C9DB /* ZMAXAppInitialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXAppInitialization.h; sourceTree = "<group>"; };
 		783A5C7325D0F1D30076C9DB /* ZMAXAppInitialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXAppInitialization.m; sourceTree = "<group>"; };
+		783A5C8425D11FFF0076C9DB /* ZMAXBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXBaseNavigationController.h; sourceTree = "<group>"; };
+		783A5C8525D11FFF0076C9DB /* ZMAXBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXBaseNavigationController.m; sourceTree = "<group>"; };
+		783A5CAC25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXCycleScrollCollectionViewCell.h; sourceTree = "<group>"; };
+		783A5CAD25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXCycleScrollCollectionViewCell.m; sourceTree = "<group>"; };
+		783A5CB925D26E2C0076C9DB /* ZMAXLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXLocationManager.h; sourceTree = "<group>"; };
+		783A5CBA25D26E2C0076C9DB /* ZMAXLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXLocationManager.m; sourceTree = "<group>"; };
+		783A5CC025D2A38B0076C9DB /* ZMAXNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXNetwork.h; sourceTree = "<group>"; };
+		783A5CC125D2A38B0076C9DB /* ZMAXNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXNetwork.m; sourceTree = "<group>"; };
 		78422A6E25A320820027D881 /* ZMAXSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSettingViewController.h; sourceTree = "<group>"; };
 		78422A6F25A320820027D881 /* ZMAXSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSettingViewController.m; sourceTree = "<group>"; };
 		78422A7725B417A00027D881 /* ZMAXSettingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSettingCollectionViewCell.h; sourceTree = "<group>"; };
@@ -66,6 +81,12 @@
 		78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXPromptPopupViewController.m; sourceTree = "<group>"; };
 		787DF16E259C8907002A731B /* ZMAXBaseLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXBaseLib.h; sourceTree = "<group>"; };
 		787DF16F259C8907002A731B /* ZMAXBaseLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXBaseLib.m; sourceTree = "<group>"; };
+		7893670625D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZMAXAdditions.h"; sourceTree = "<group>"; };
+		7893670725D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZMAXAdditions.m"; sourceTree = "<group>"; };
+		7893670F25D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXMultifunctionCollectionViewCell.h; sourceTree = "<group>"; };
+		7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMultifunctionCollectionViewCell.m; sourceTree = "<group>"; };
+		7893671525D6549400AD98F1 /* ZMAXHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXHomeHeaderView.h; sourceTree = "<group>"; };
+		7893671625D6549400AD98F1 /* ZMAXHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXHomeHeaderView.m; sourceTree = "<group>"; };
 		78A1E2262599CA5600E0CE10 /* Zmax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zmax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A1E2292599CA5600E0CE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78A1E22A2599CA5600E0CE10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +176,42 @@
 			path = Initialization;
 			sourceTree = "<group>";
 		};
+		783A5CA725D152440076C9DB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		783A5CAB25D2501F0076C9DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				783A5CAC25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.h */,
+				783A5CAD25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m */,
+				7893670F25D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.h */,
+				7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		783A5CB525D26C770076C9DB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				783A5CB925D26E2C0076C9DB /* ZMAXLocationManager.h */,
+				783A5CBA25D26E2C0076C9DB /* ZMAXLocationManager.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		783A5CBF25D2A3730076C9DB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				783A5CC025D2A38B0076C9DB /* ZMAXNetwork.h */,
+				783A5CC125D2A38B0076C9DB /* ZMAXNetwork.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		78422A6D25A3206B0027D881 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +226,9 @@
 		78422A7D25B45FAB0027D881 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				783A5CA725D152440076C9DB /* UIKit */,
+				783A5C8425D11FFF0076C9DB /* ZMAXBaseNavigationController.h */,
+				783A5C8525D11FFF0076C9DB /* ZMAXBaseNavigationController.m */,
 				78422A7E25B45FC70027D881 /* PromptPopup */,
 				78D530B525A0A4E700D8C140 /* NavigationBar */,
 				78944B47259B2D6C002ADC86 /* TabBar */,
@@ -183,6 +243,15 @@
 				78422A8025B460060027D881 /* ZMAXPromptPopupViewController.m */,
 			);
 			path = PromptPopup;
+			sourceTree = "<group>";
+		};
+		7893670525D2C62800AD98F1 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				7893670625D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.h */,
+				7893670725D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 		78944B47259B2D6C002ADC86 /* TabBar */ = {
@@ -205,6 +274,10 @@
 		78944B48259B2D7E002ADC86 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7893670525D2C62800AD98F1 /* NSDictionary */,
+				783A5C7125D0F1BB0076C9DB /* Initialization */,
+				783A5C5E25D0DED50076C9DB /* UserDefaults */,
+				783A5CB525D26C770076C9DB /* Location */,
 				78BD4D50259C8A2A00913B95 /* BaseLib */,
 				78944B49259B2E5C002ADC86 /* Color */,
 			);
@@ -296,8 +369,7 @@
 		78A1E26C2599CEAF00E0CE10 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				783A5C7125D0F1BB0076C9DB /* Initialization */,
-				783A5C5E25D0DED50076C9DB /* UserDefaults */,
+				783A5CBF25D2A3730076C9DB /* Network */,
 				78944B48259B2D7E002ADC86 /* Base */,
 				78422A7D25B45FAB0027D881 /* CommonUI */,
 				78D5308F25A06C4300D8C140 /* Home */,
@@ -321,8 +393,11 @@
 		78D5308F25A06C4300D8C140 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				783A5CAB25D2501F0076C9DB /* Cell */,
 				78D5309725A092A600D8C140 /* ZMAXHomeViewController.h */,
 				78D5309825A092A600D8C140 /* ZMAXHomeViewController.m */,
+				7893671525D6549400AD98F1 /* ZMAXHomeHeaderView.h */,
+				7893671625D6549400AD98F1 /* ZMAXHomeHeaderView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -583,8 +658,10 @@
 			files = (
 				78D530A525A092DD00D8C140 /* ZMAXRecommendViewController.m in Sources */,
 				78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */,
+				7893670825D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m in Sources */,
 				78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */,
 				78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */,
+				783A5CBB25D26E2C0076C9DB /* ZMAXLocationManager.m in Sources */,
 				78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */,
 				78D5308B25A05BEF00D8C140 /* ZMAXTabBarBaseIconView.m in Sources */,
 				787DF170259C8907002A731B /* ZMAXBaseLib.m in Sources */,
@@ -595,10 +672,15 @@
 				78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */,
 				78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */,
 				78422A8125B460060027D881 /* ZMAXPromptPopupViewController.m in Sources */,
+				7893671725D6549400AD98F1 /* ZMAXHomeHeaderView.m in Sources */,
+				783A5CAE25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m in Sources */,
+				783A5C8625D11FFF0076C9DB /* ZMAXBaseNavigationController.m in Sources */,
 				78D5309F25A092BB00D8C140 /* ZMAXFunctionViewController.m in Sources */,
 				783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */,
+				7893671125D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m in Sources */,
 				78A1E23C2599CA5600E0CE10 /* main.m in Sources */,
 				783A5C6125D0DF010076C9DB /* ZMAXUserDefaults.m in Sources */,
+				783A5CC225D2A38B0076C9DB /* ZMAXNetwork.m in Sources */,
 				78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */,
 				78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */,
 				78422A7025A320820027D881 /* ZMAXSettingViewController.m in Sources */,

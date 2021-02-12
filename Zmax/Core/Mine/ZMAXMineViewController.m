@@ -36,7 +36,6 @@
     self.baseView.frame = self.view.bounds;
     
     [self.view addSubview:self.navigationBarView];
-    
 }
 
 #pragma mark - Setter/Getter

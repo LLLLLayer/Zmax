@@ -10,9 +10,9 @@
 
 #import "ZMAXTabBarImageIconView.h"
 
-static const CGFloat ZMAXTabBarImageIconIconTopMargin = 10.0;
-static const CGFloat ZMAXTabBarImageIconIconWidth = 35.0;
-static const CGFloat ZMAXTabBarImageIconIconHeight = 30.0;
+static const CGFloat ZMAXTabBarImageIconIconTopMargin = 5.0;
+static const CGFloat ZMAXTabBarImageIconIconWidth = 55.0;
+static const CGFloat ZMAXTabBarImageIconIconHeight = 50.0;
 
 @interface ZMAXTabBarImageIconView ()
 

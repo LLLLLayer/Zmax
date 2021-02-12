@@ -36,10 +36,6 @@ ZMAXSettingCollectionViewCellDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self __setupUI];
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    }
 }
 
 - (void)__setupUI
