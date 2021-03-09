@@ -33,7 +33,10 @@ static const CGFloat ZMAXTabBarTipsPadding = 1.0;
                                                                                 ZMAXTabBarTipsPadding,
                                                                                 ZMAXTabBarTipsWidth - 2.0 * ZMAXTabBarTipsPadding,
                                                                                 ZMAXTabBarTipsWidth - 2.0 * ZMAXTabBarTipsPadding)
-                                                   byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomRight
+                                                   byRoundingCorners:UIRectCornerTopLeft |
+                                                                     UIRectCornerTopRight |
+                                                                     UIRectCornerBottomRight |
+                                                                     UIRectCornerBottomLeft
                                                          cornerRadii:CGSizeMake(ZMAXTabBarTipsWidth / 2.0, ZMAXTabBarTipsWidth / 2.0)];
         CAShapeLayer *layer = [CAShapeLayer layer];
         layer.path = path.CGPath;

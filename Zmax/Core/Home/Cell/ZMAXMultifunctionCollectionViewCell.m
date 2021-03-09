@@ -55,7 +55,10 @@
 {
     if (!_baseView) {
         _baseView = [[UIView alloc] init];
-        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorStandardColor];
+        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorCellBackGroundColor];
+        _baseView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__handelTapBaseViewWithGesture:)];
+        [_baseView addGestureRecognizer:gesture];
     }
     return _baseView;
 }
@@ -81,6 +84,16 @@
     return _titleLable;
 }
 
+- (void)__handelTapBaseViewWithGesture:(UITapGestureRecognizer *)gesture
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.duration = 0.25;
+    animation.keyTimes = @[@(0.0), @(0.5), @(1.0)];
+    animation.values = @[@(1.0), @(0.9), @(1.0)];
+    [self.baseView.layer addAnimation:animation forKey:@"iconShrink"];
+    
+    BLOCK(self.tapAction);
+}
 
 @end
 

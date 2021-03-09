@@ -7,12 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ZMAXMultifunctionItemBlock)(void);
 
 @interface MultifunctionItem : UIView
 
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UILabel *titleLable;
+@property (nonatomic, strong) ZMAXMultifunctionItemBlock tapAction;
 
 @end
 
@@ -22,4 +23,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

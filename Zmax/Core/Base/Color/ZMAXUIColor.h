@@ -67,3 +67,8 @@ FOUNDATION_EXPORT NSString * const ZMAXUIColorGeneralMaskBackground;
  弹窗背景色
  */
 FOUNDATION_EXPORT NSString * const ZMAXUIColorPromptPopupBackground;
+/*
+ 通用 Cell 背景色
+ */
+FOUNDATION_EXPORT NSString * const ZMAXUIColorCellBackGroundColor;
+

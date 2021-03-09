@@ -28,6 +28,7 @@
 		78A1E2462599CA5700E0CE10 /* ZmaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2452599CA5700E0CE10 /* ZmaxTests.m */; };
 		78A1E2512599CA5700E0CE10 /* ZmaxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2502599CA5700E0CE10 /* ZmaxUITests.m */; };
 		78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */; };
+		78D1246925D68678001685AD /* ZMAXMapCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */; };
 		78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53078259DC35100D8C140 /* ZMAXTabBarView.m */; };
 		78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5307E259F418300D8C140 /* ZMAXTabBarGeneralIconView.m */; };
 		78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53084259F41FF00D8C140 /* ZMAXTabBarImageIconView.m */; };
@@ -104,6 +105,8 @@
 		78A1E2522599CA5700E0CE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78A1E2842599F35100E0CE10 /* ZMAXTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarViewController.h; sourceTree = "<group>"; };
 		78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarViewController.m; sourceTree = "<group>"; };
+		78D1246725D68678001685AD /* ZMAXMapCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXMapCollectionViewCell.h; sourceTree = "<group>"; };
+		78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMapCollectionViewCell.m; sourceTree = "<group>"; };
 		78D53077259DC35100D8C140 /* ZMAXTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarView.h; sourceTree = "<group>"; };
 		78D53078259DC35100D8C140 /* ZMAXTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarView.m; sourceTree = "<group>"; };
 		78D5307D259F418300D8C140 /* ZMAXTabBarGeneralIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarGeneralIconView.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				783A5CAD25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m */,
 				7893670F25D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.h */,
 				7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */,
+				78D1246725D68678001685AD /* ZMAXMapCollectionViewCell.h */,
+				78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */,
 				7893670825D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m in Sources */,
 				78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */,
+				78D1246925D68678001685AD /* ZMAXMapCollectionViewCell.m in Sources */,
 				78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */,
 				783A5CBB25D26E2C0076C9DB /* ZMAXLocationManager.m in Sources */,
 				78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */,

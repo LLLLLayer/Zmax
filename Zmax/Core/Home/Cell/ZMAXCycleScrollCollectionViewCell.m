@@ -12,7 +12,7 @@
 
 #import "ZMAXCycleScrollCollectionViewCell.h"
 
-@interface ZMAXCycleScrollCollectionViewCell ()
+@interface ZMAXCycleScrollCollectionViewCell () <SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) UIView *baseView;
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
@@ -55,8 +55,7 @@
 {
     if (!_baseView) {
         _baseView = [[UIView alloc] init];
-//        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorGeneralBackground];
-        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorStandardColor];
+        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorCellBackGroundColor];
         UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.contentView.frame cornerRadius:GENREAL_RADIUS];
         CAShapeLayer *layer = [CAShapeLayer layer];
         layer.path = path.CGPath;
@@ -64,6 +63,7 @@
     }
     return _baseView;
 }
+
 - (SDCycleScrollView *)cycleScrollView
 {
     if (!_cycleScrollView) {
@@ -74,8 +74,20 @@
                                                                          [UIImage imageNamed:@"NoNews"]
                                                        ]];
         _cycleScrollView.backgroundColor = [UIColor clearColor];
+        _cycleScrollView.delegate = self;
     }
     return _cycleScrollView;
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.keyTimes = @[@0.0, @0.5, @1.0];
+    animation.values = @[@1.0, @0.9, @1.0];
+    animation.duration = 0.25;
+    [self.baseView.layer addAnimation:animation forKey:@"iconShrink"];
 }
 
 @end

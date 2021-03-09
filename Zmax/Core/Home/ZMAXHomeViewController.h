@@ -7,10 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSInteger, ZMAXHomeFunctionType) {
+    ZMAXHomeFunctionTypeCycleScroll = 0,
+    ZMAXHomeFunctionTypeMultifunction = 1,
+    ZMAXHomeFunctionTypeMapView = 2,
+};
 
 @interface ZMAXHomeViewController : UIViewController
 
 @end
 
-NS_ASSUME_NONNULL_END

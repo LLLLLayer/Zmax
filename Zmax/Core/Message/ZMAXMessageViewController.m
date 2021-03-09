@@ -5,9 +5,12 @@
 //  Created by 杨杰 on 2021/1/2.
 //
 
+#import "ZMAXNavigationBarView.h"
 #import "ZMAXMessageViewController.h"
 
 @interface ZMAXMessageViewController ()
+
+@property (nonatomic, strong) ZMAXNavigationBarView *navigationBarView;
 
 @end
 
@@ -15,17 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self __setupUI];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)__setupUI
+{
+    [self.view addSubview:self.navigationBarView];
 }
-*/
+
+- (ZMAXNavigationBarView *)navigationBarView
+{
+    if (!_navigationBarView) {
+        _navigationBarView = [[ZMAXNavigationBarView alloc] initWithStyle:ZMAXNavigationBarStyleDefault];
+        [_navigationBarView addTitle:@"消息" action:nil];
+    }
+    return _navigationBarView;
+}
 
 @end

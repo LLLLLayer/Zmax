@@ -91,7 +91,7 @@ static const CGFloat ZMAXSettingCollectionIconWidth = 20.0;
 {
     if (!_baseView) {
         _baseView = [[UIView alloc] init];
-        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorStandardColor];
+        _baseView.backgroundColor = [UIColor colorNamed:ZMAXUIColorCellBackGroundColor];
         UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__hanldBaseViewDidTapWithGesture:)];
         [_baseView addGestureRecognizer:gesture];
     }

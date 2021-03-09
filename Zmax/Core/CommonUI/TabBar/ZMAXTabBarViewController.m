@@ -40,7 +40,6 @@
                              self.mineViewController];
     [self __setupUI];
     
-    [self.tabBarView showTipsViewWithType:ZMAXTabBarTypeRecommend show:YES];
     [self.tabBarView showTipsViewWithType:ZMAXTabBarTypeMessage show:YES];
 }
 

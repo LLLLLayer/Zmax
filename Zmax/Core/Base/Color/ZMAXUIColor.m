@@ -22,3 +22,4 @@ NSString * const ZMAXUIColorPromptPopupBackground = @"ZMAXUIColorPromptPopupBack
 NSString * const ZMAXUIColorConstBlackColor = @"ZMAXUIColorConstBlackColor";
 NSString * const ZMAXUIColorConstWhiteColor = @"ZMAXUIColorConstWhiteColor";
 NSString * const ZMAXUIColorBrandRedColor = @"ZMAXUIColorBrandRedColor";
+NSString * const ZMAXUIColorCellBackGroundColor = @"ZMAXUIColorCellBackGroundColor";

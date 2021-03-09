@@ -96,9 +96,9 @@
 - (ZMAXTabBarGeneralIconView *)functionView
 {
     if (!_functionView) {
-        _functionView = [[ZMAXTabBarGeneralIconView alloc] initWithNormalImage:[UIImage systemImageNamed:@"cart"]
-                                                                 selectedImage:[UIImage systemImageNamed:@"cart.fill"]
-                                                                         title:@"商业"];
+        _functionView = [[ZMAXTabBarGeneralIconView alloc] initWithNormalImage:[UIImage systemImageNamed:@"paperplane"]
+                                                                 selectedImage:[UIImage systemImageNamed:@"paperplane.fill"]
+                                                                         title:@"资讯"];
         weakify(self);
         _functionView.block = ^{
             strongify(weakSelf);
@@ -111,7 +111,7 @@
 - (ZMAXTabBarImageIconView *)recommendView
 {
     if (!_recommendView) {
-        _recommendView = [[ZMAXTabBarImageIconView alloc] initWithNormalImage:[UIImage imageNamed:@"ZmaxIcon"]
+        _recommendView = [[ZMAXTabBarImageIconView alloc] initWithNormalImage:[UIImage imageNamed:@"ZmaxIconDefault"]
                                                                 selectedImage:[UIImage imageNamed:@"ZmaxIcon"]];
         weakify(self);
         _recommendView.block = ^{
