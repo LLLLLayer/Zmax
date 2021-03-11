@@ -88,6 +88,10 @@
     animation.values = @[@1.0, @0.9, @1.0];
     animation.duration = 0.25;
     [self.baseView.layer addAnimation:animation forKey:@"iconShrink"];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(scrollCollectionViewCellDidtapWithCell:index:)]) {
+        [self.delegate scrollCollectionViewCellDidtapWithCell:self index:index];
+    }
 }
 
 @end

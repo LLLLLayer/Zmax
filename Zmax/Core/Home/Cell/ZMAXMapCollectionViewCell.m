@@ -61,6 +61,8 @@
         CAShapeLayer *layer = [CAShapeLayer layer];
         layer.path = path.CGPath;
         _baseView.layer.mask = layer;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__handelTapBaseViewWithGesture:)];
+        [_baseView addGestureRecognizer:gesture];
     }
     return _baseView;
 }
@@ -79,6 +81,21 @@
 - (void)changeStyleToNight:(BOOL)night
 {
     [_mapView setMapType:night ? MAMapTypeStandardNight : MAMapTypeStandard];
+}
+
+#pragma mark - Gestiure
+
+- (void)__handelTapBaseViewWithGesture:(UITapGestureRecognizer *)gesture
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.duration = 0.25;
+    animation.keyTimes = @[@(0.0), @(0.5), @(1.0)];
+    animation.values = @[@(1.0), @(0.9), @(1.0)];
+    [self.baseView.layer addAnimation:animation forKey:@"iconShrink"];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mapCollectionViewCellDidTapWithCell:)]) {
+        [self.delegate mapCollectionViewCellDidTapWithCell:self];
+    }
 }
 
 @end

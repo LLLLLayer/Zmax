@@ -19,11 +19,19 @@
 #import "ZMAXNavigationBarView.h"
 #import "ZMAXHomeHeaderView.h"
 
+#import "ZMAXHomeCollectionViewCellProtocol.h"
 #import "ZMAXCycleScrollCollectionViewCell.h"
 #import "ZMAXMultifunctionCollectionViewCell.h"
 #import "ZMAXMapCollectionViewCell.h"
+#import "ZMAXCustomerServiceCell.h"
 
-@interface ZMAXHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ZMAXHomeViewController ()
+<
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout,
+ZMAXHomeCollectionViewCellProtocol
+>
 
 @property (nonatomic, strong) ZMAXNavigationBarView *navigationBarView;
 @property (nonatomic, strong) UILabel *appLable;
@@ -39,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self __setupUI];
-    
+    [self __loadRefresh];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didUpdateLocationsNotificationAction:)
                                                  name:ZMAXDidUpdateLocationsNotification
@@ -147,7 +155,12 @@
 - (NSArray<NSArray *> *)items
 {
     if (!_items) {
-        _items = @[@[@(1)], @[@(2)], @[@(3)], @[@(4)]];
+        _items = @[
+        @[@(ZMAXHomeFunctionTypeCycleScroll)],
+        @[@(ZMAXHomeFunctionTypeMultifunction)],
+        @[@(ZMAXHomeFunctionTypeMapView)],
+        @[@(ZMAXHomeFunctionTypeCustomerService)]
+        ];
     }
     return _items;
 }
@@ -173,6 +186,9 @@
         
         [_collectionView registerClass:[ZMAXMapCollectionViewCell class]
             forCellWithReuseIdentifier:[ZMAXMapCollectionViewCell identifier]];
+        
+        [_collectionView registerClass:[ZMAXCustomerServiceCell class]
+            forCellWithReuseIdentifier:[ZMAXCustomerServiceCell identifier]];
         
         [_collectionView registerClass:[UICollectionViewCell class]
             forCellWithReuseIdentifier:NSStringFromClass([UICollectionViewCell class])];
@@ -203,7 +219,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    if (section == ZMAXHomeFunctionTypeMapView) {
+    if (section == ZMAXHomeFunctionTypeMapView || section == ZMAXHomeFunctionTypeCustomerService) {
         return CGSizeMake(SCREEN_WIDTH, kZMAXHomeHeaderViewHeight);
     }
     // default
@@ -217,7 +233,16 @@
                                           dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                              withReuseIdentifier:[ZMAXHomeHeaderView identifier]
                                                                     forIndexPath:indexPath];
-        [view configWithTitle:@"附近调研" subTitle:@"走到哪 查到哪"];
+        [view configWithTitle:@"城市调研 & 人群观察" subTitle:@"走到哪里 查到哪里"];
+        return view;
+    }
+    
+    if (indexPath.section == ZMAXHomeFunctionTypeCustomerService) {
+        ZMAXHomeHeaderView *view = [collectionView
+                                          dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                             withReuseIdentifier:[ZMAXHomeHeaderView identifier]
+                                                                    forIndexPath:indexPath];
+        [view configWithTitle:@"疑问解答 & 在线咨询" subTitle:@"快速沟通 解决困惑"];
         return view;
     }
     // default
@@ -239,6 +264,9 @@
     } else if (indexPath.section == ZMAXHomeFunctionTypeMapView && indexPath.row == 0) {
         CGFloat width = SCREEN_WIDTH - GENREAL_PADDING * 2.0;
         return CGSizeMake(width, width / 2.0);
+    } else if (indexPath.section == ZMAXHomeFunctionTypeCustomerService && indexPath.row == 0) {
+        CGFloat width = SCREEN_WIDTH - GENREAL_PADDING * 2.0;
+        return CGSizeMake(width, width / 2.0 + GENREAL_PADDING);
     }
     return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH / 2.0);
 }
@@ -247,28 +275,102 @@
 {
     if (indexPath.section == ZMAXHomeFunctionTypeCycleScroll && indexPath.row == 0) {
         ZMAXCycleScrollCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[ZMAXCycleScrollCollectionViewCell identifier] forIndexPath:indexPath];
+        cell.delegate = self;
         return cell;
     }
     if (indexPath.section == ZMAXHomeFunctionTypeMultifunction && indexPath.row == 0) {
         ZMAXCycleScrollCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[ZMAXMultifunctionCollectionViewCell identifier] forIndexPath:indexPath];
+        cell.delegate = self;
         return cell;
     }
     
     if (indexPath.section == ZMAXHomeFunctionTypeMapView && indexPath.row == 0) {
         ZMAXMapCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[ZMAXMapCollectionViewCell identifier] forIndexPath:indexPath];
         [cell changeStyleToNight:UITraitCollection.currentTraitCollection.userInterfaceStyle == UIUserInterfaceStyleDark];
+        cell.delegate = self;
+        return cell;
+    }
+    
+    if (indexPath.section == ZMAXHomeFunctionTypeCustomerService && indexPath.row == 0) {
+        ZMAXCustomerServiceCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[ZMAXCustomerServiceCell identifier] forIndexPath:indexPath];
+        cell.delegate = self;
         return cell;
     }
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([UICollectionViewCell class])
                                                                            forIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor redColor];
     return cell;
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
     [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:ZMAXHomeFunctionTypeMapView]]];
+}
+
+#pragma mark - MJRefresh
+
+- (void)__loadRefresh
+{
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
+                                                                     refreshingAction:@selector(__fetchData)];
+    self.collectionView.mj_header = header;
+    [self.collectionView.mj_header beginRefreshing];
+    
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                                             refreshingAction:@selector(__loadMore)];
+    self.collectionView.mj_footer = footer;
+}
+
+- (void)__fetchData
+{
+    [self.collectionView.mj_header endRefreshing];
+}
+
+- (void)__loadMore
+{
+    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+}
+
+#pragma mark - ZMAXHomeCollectionViewCellProtocol
+
+- (void)scrollCollectionViewCellDidtapWithCell:(ZMAXCycleScrollCollectionViewCell *)cell index:(NSInteger)index
+{
+    NSLog(@"[YJ] %@", @"0");
+}
+
+- (void)multifunctionCollectionViewCellDidTapLocationRecommendItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"1");
+}
+
+- (void)multifunctionCollectionViewCellDidTapRecommendationPeportItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"2");
+}
+
+- (void)multifunctionCollectionViewCellDidTapLocationRecordItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"3");
+}
+
+- (void)multifunctionCollectionViewCellDidTapRecommendedBusinessItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"4");
+}
+
+- (void)multifunctionCollectionViewCellDidTapCompetitiveProductItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"5");
+}
+
+- (void)mapCollectionViewCellDidTapWithCell:(ZMAXMapCollectionViewCell *)cell
+{
+    NSLog(@"[YJ] %@", @"6");
+}
+
+- (void)customerServiceCellDidTapWithCell:(ZMAXCustomerServiceCell *)cell
+{
+    NSLog(@"[YJ] %@", @"7");
 }
 
 @end

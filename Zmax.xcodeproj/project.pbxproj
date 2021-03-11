@@ -29,6 +29,7 @@
 		78A1E2512599CA5700E0CE10 /* ZmaxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2502599CA5700E0CE10 /* ZmaxUITests.m */; };
 		78A1E2862599F35100E0CE10 /* ZMAXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */; };
 		78D1246925D68678001685AD /* ZMAXMapCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */; };
+		78D3CF7025F76C3800D3674B /* ZMAXCustomerServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3CF6F25F76C3800D3674B /* ZMAXCustomerServiceCell.m */; };
 		78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53078259DC35100D8C140 /* ZMAXTabBarView.m */; };
 		78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5307E259F418300D8C140 /* ZMAXTabBarGeneralIconView.m */; };
 		78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D53084259F41FF00D8C140 /* ZMAXTabBarImageIconView.m */; };
@@ -107,6 +108,9 @@
 		78A1E2852599F35100E0CE10 /* ZMAXTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarViewController.m; sourceTree = "<group>"; };
 		78D1246725D68678001685AD /* ZMAXMapCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXMapCollectionViewCell.h; sourceTree = "<group>"; };
 		78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMapCollectionViewCell.m; sourceTree = "<group>"; };
+		78D3CF6E25F76C3800D3674B /* ZMAXCustomerServiceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXCustomerServiceCell.h; sourceTree = "<group>"; };
+		78D3CF6F25F76C3800D3674B /* ZMAXCustomerServiceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXCustomerServiceCell.m; sourceTree = "<group>"; };
+		78D3CF7425F8668A00D3674B /* ZMAXHomeCollectionViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXHomeCollectionViewCellProtocol.h; sourceTree = "<group>"; };
 		78D53077259DC35100D8C140 /* ZMAXTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarView.h; sourceTree = "<group>"; };
 		78D53078259DC35100D8C140 /* ZMAXTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXTabBarView.m; sourceTree = "<group>"; };
 		78D5307D259F418300D8C140 /* ZMAXTabBarGeneralIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXTabBarGeneralIconView.h; sourceTree = "<group>"; };
@@ -189,12 +193,15 @@
 		783A5CAB25D2501F0076C9DB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				78D3CF7425F8668A00D3674B /* ZMAXHomeCollectionViewCellProtocol.h */,
 				783A5CAC25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.h */,
 				783A5CAD25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m */,
 				7893670F25D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.h */,
 				7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */,
 				78D1246725D68678001685AD /* ZMAXMapCollectionViewCell.h */,
 				78D1246825D68678001685AD /* ZMAXMapCollectionViewCell.m */,
+				78D3CF6E25F76C3800D3674B /* ZMAXCustomerServiceCell.h */,
+				78D3CF6F25F76C3800D3674B /* ZMAXCustomerServiceCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -682,6 +689,7 @@
 				783A5CAE25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m in Sources */,
 				783A5C8625D11FFF0076C9DB /* ZMAXBaseNavigationController.m in Sources */,
 				78D5309F25A092BB00D8C140 /* ZMAXFunctionViewController.m in Sources */,
+				78D3CF7025F76C3800D3674B /* ZMAXCustomerServiceCell.m in Sources */,
 				783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */,
 				7893671125D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m in Sources */,
 				78A1E23C2599CA5600E0CE10 /* main.m in Sources */,

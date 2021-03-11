@@ -140,6 +140,14 @@
                                                                                      self.contentView.frame.size.height)];
         _locationRecommendItem.iconImageView.image = [UIImage imageNamed:@"LocationRecommendation"];
         _locationRecommendItem.titleLable.text = @"选址推荐";
+        
+        weakify(self);
+        _locationRecommendItem.tapAction = ^{
+            strongify(weakSelf);
+            if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(multifunctionCollectionViewCellDidTapLocationRecommendItemWithCell:)]) {
+                [strongSelf.delegate multifunctionCollectionViewCellDidTapLocationRecommendItemWithCell:strongSelf];
+            }
+        };
     }
     return _locationRecommendItem;
 }
@@ -154,6 +162,14 @@
                                                                                         self.contentView.frame.size.height)];
         _recommendationPeportItem.iconImageView.image = [UIImage imageNamed:@"DataAnalysis"];
         _recommendationPeportItem.titleLable.text = @"推荐报告";
+        
+        weakify(self);
+        _recommendationPeportItem.tapAction = ^{
+            strongify(weakSelf);
+            if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(multifunctionCollectionViewCellDidTapRecommendationPeportItemWithCell:)]) {
+                [strongSelf.delegate multifunctionCollectionViewCellDidTapRecommendationPeportItemWithCell:strongSelf];
+            }
+        };
     }
     return _recommendationPeportItem;
 }
@@ -168,6 +184,14 @@
         
         _locationRecordItem.iconImageView.image = [UIImage imageNamed:@"PathRecord"];
         _locationRecordItem.titleLable.text = @"考察记录";
+        
+        weakify(self);
+        _locationRecordItem.tapAction = ^{
+            strongify(weakSelf);
+            if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(multifunctionCollectionViewCellDidTapLocationRecordItemWithCell:)]) {
+                [strongSelf.delegate multifunctionCollectionViewCellDidTapLocationRecordItemWithCell:strongSelf];
+            }
+        };
     }
     return _locationRecordItem;
 }
@@ -181,6 +205,14 @@
                                                                                   self.contentView.frame.size.height / 2.0)];
         _recommendedBusinessItem.iconImageView.image = [UIImage imageNamed:@"RecommendedBusinessOpportunities"];
         _recommendedBusinessItem.titleLable.text = @"商机推荐";
+        
+        weakify(self);
+        _recommendedBusinessItem.tapAction = ^{
+            strongify(weakSelf);
+            if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(multifunctionCollectionViewCellDidTapRecommendedBusinessItemWithCell:)]) {
+                [strongSelf.delegate multifunctionCollectionViewCellDidTapRecommendedBusinessItemWithCell:strongSelf];
+            }
+        };
     }
     return _recommendedBusinessItem;
 }
@@ -194,6 +226,14 @@
                                                                                   self.contentView.frame.size.height / 2.0)];
         _competitiveProductItem.iconImageView.image = [UIImage imageNamed:@"CompetitiveProductAnalysis"];
         _competitiveProductItem.titleLable.text = @"竞品分析";
+        
+        weakify(self);
+        _competitiveProductItem.tapAction = ^{
+            strongify(weakSelf);
+            if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(multifunctionCollectionViewCellDidTapCompetitiveProductItemWithCell:)]) {
+                [strongSelf.delegate multifunctionCollectionViewCellDidTapCompetitiveProductItemWithCell:strongSelf];
+            }
+        };
     }
     return _competitiveProductItem;
 }

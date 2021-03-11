@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZMAXHomeCollectionViewCellProtocol.h"
 
 typedef void(^ZMAXMultifunctionItemBlock)(void);
 
@@ -18,6 +19,8 @@ typedef void(^ZMAXMultifunctionItemBlock)(void);
 @end
 
 @interface ZMAXMultifunctionCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, weak) id <ZMAXHomeCollectionViewCellProtocol> delegate;
 
 + (NSString *)identifier;
 
