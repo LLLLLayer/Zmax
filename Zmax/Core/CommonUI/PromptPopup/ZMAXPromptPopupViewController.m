@@ -237,7 +237,7 @@ static const CGFloat ZMAXPromptPopupCloseIconWidth = 20.0;
 {
     if (!_defaultButton) {
         _defaultButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _defaultButton.backgroundColor = [UIColor colorNamed:ZMAXUIColorBrandRedColor];
+        _defaultButton.backgroundColor = [UIColor colorNamed:ZMAXUIColorBrandBlueColor];
         _defaultButton.layer.cornerRadius = 4.0;
         [_defaultButton setTitleColor:[UIColor colorNamed:ZMAXUIColorConstWhiteColor] forState:UIControlStateNormal];
         _defaultButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
@@ -250,7 +250,7 @@ static const CGFloat ZMAXPromptPopupCloseIconWidth = 20.0;
 {
     if (!_rightButton) {
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _rightButton.backgroundColor = [UIColor colorNamed:ZMAXUIColorBrandRedColor];
+        _rightButton.backgroundColor = [UIColor colorNamed:ZMAXUIColorBrandBlueColor];
         _rightButton.layer.cornerRadius = 4.0;
         [_rightButton setTitleColor:[UIColor colorNamed:ZMAXUIColorConstWhiteColor] forState:UIControlStateNormal];
         _rightButton.titleLabel.font = [UIFont systemFontOfSize:17.0];

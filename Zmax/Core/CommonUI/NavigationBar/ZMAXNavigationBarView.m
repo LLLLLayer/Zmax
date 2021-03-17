@@ -22,6 +22,7 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 @interface ZMAXNavigationBarView ()
 
 @property (nonatomic, assign) ZMAXNavigationBarStyle style;
+@property (nonatomic, assign) BOOL ignoreSafeTop;
 
 @property (nonatomic, strong) UIView *baseView;
 @property (nonatomic, strong) UIView *lineView;
@@ -75,9 +76,25 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
     return self;
 }
 
+- (instancetype)initWithStyle:(ZMAXNavigationBarStyle)style ignoreSafeTop:(BOOL)ignore
+{
+    self = [super init];
+    if (self) {
+        self.style = style;
+        self.ignoreSafeTop = ignore;
+        [self __setupUI];
+    }
+    return self;
+}
+
+- (CGFloat)__safeTop
+{
+    return self.ignoreSafeTop ? 0.0 : SAFE_TOP;
+}
+
 - (void)__setupUI
 {
-    self.frame = CGRectMake(0.0, 0.0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT + SAFE_TOP);
+    self.frame = CGRectMake(0.0, 0.0, SCREEN_WIDTH, NAVIGATION_BAR_HEIGHT + [self __safeTop]);
     
     [self addSubview:self.baseView];
     self.baseView.frame = self.bounds;
@@ -306,9 +323,9 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
     [self.baseView addSubview:self.titleLable];
     CGFloat frameX = ZMAXNavigationBarGeneralPadding + ZMAXNavigationBarIconWidth * 2.0 + ZMAXNavigationBarGeneralInterval * 2.0;
     self.titleLable.frame = CGRectMake(frameX,
-                                       SAFE_TOP + ZMAXNavigationBarTopPadding,
+                                       [self __safeTop] + ZMAXNavigationBarTopPadding,
                                        self.baseView.frame.size.width - frameX * 2.0,
-                                       self.baseView.frame.size.height - SAFE_TOP - ZMAXNavigationBarTopPadding * 2.0);
+                                       self.baseView.frame.size.height - [self __safeTop] - ZMAXNavigationBarTopPadding * 2.0);
     
     self.titleLable.text = title;
     self.titleAction = action;
@@ -532,9 +549,9 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.leftBaseView];
     self.leftBaseView.frame = CGRectMake(ZMAXNavigationBarGeneralPadding - ZMAXNavigationBarIconDefaultPadding,
-                                               SAFE_TOP + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
-                                               ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
-                                               ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
+                                        [self __safeTop] + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
+                                        ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
+                                        ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
     
     [self.leftBaseView addSubview:self.leftImageView];
     self.leftImageView.frame = CGRectMake(ZMAXNavigationBarIconDefaultPadding,
@@ -550,9 +567,9 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.leftSecondBaseView];
     self.leftSecondBaseView.frame = CGRectMake(ZMAXNavigationBarGeneralPadding + ZMAXNavigationBarIconWidth + ZMAXNavigationBarGeneralInterval - ZMAXNavigationBarIconDefaultPadding,
-                                                SAFE_TOP + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
-                                                ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
-                                                ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
+                                               [self __safeTop] + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
+                                               ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
+                                               ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
     
     [self.leftSecondBaseView addSubview:self.leftSecondImageView];
     self.leftSecondImageView.frame = CGRectMake(ZMAXNavigationBarIconDefaultPadding,
@@ -568,7 +585,7 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.rightBaseView];
     self.rightBaseView.frame = CGRectMake(SCREEN_WIDTH - ZMAXNavigationBarGeneralPadding - ZMAXNavigationBarIconWidth - ZMAXNavigationBarIconDefaultPadding,
-                                                SAFE_TOP + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
+                                                [self __safeTop] + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
                                                 ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
                                                 ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
     
@@ -586,7 +603,7 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.rightSecondBaseView];
     self.rightSecondBaseView.frame = CGRectMake(SCREEN_WIDTH - ZMAXNavigationBarGeneralPadding - ZMAXNavigationBarIconWidth - ZMAXNavigationBarGeneralInterval - ZMAXNavigationBarIconWidth - ZMAXNavigationBarIconDefaultPadding,
-                                                SAFE_TOP + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
+                                                [self __safeTop] + ZMAXNavigationBarTopPadding - ZMAXNavigationBarIconDefaultPadding,
                                                 ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0,
                                                 ZMAXNavigationBarIconWidth + ZMAXNavigationBarIconDefaultPadding * 2.0);
     
@@ -604,7 +621,7 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.leftLabel];
     self.leftLabel.frame = CGRectMake(ZMAXNavigationBarGeneralPadding,
-                                      SAFE_TOP + ZMAXNavigationBarTopPadding,
+                                      [self __safeTop] + ZMAXNavigationBarTopPadding,
                                       ZMAXNavigationBarIconWidth * 2.0 + ZMAXNavigationBarGeneralInterval,
                                       ZMAXNavigationBarIconWidth);
     
@@ -616,7 +633,7 @@ static const CGFloat ZMAXNavigationBarIconDefaultPadding = 4.0;
 {
     [self.baseView addSubview:self.rightLabel];
     self.rightLabel.frame = CGRectMake(SCREEN_WIDTH - ZMAXNavigationBarGeneralPadding - ZMAXNavigationBarIconWidth * 2.0 - ZMAXNavigationBarGeneralInterval,
-                                       SAFE_TOP + ZMAXNavigationBarTopPadding,
+                                       [self __safeTop] + ZMAXNavigationBarTopPadding,
                                        ZMAXNavigationBarIconWidth * 2.0 + ZMAXNavigationBarGeneralInterval,
                                        ZMAXNavigationBarIconWidth);
     

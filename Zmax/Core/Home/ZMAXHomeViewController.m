@@ -25,6 +25,8 @@
 #import "ZMAXMapCollectionViewCell.h"
 #import "ZMAXCustomerServiceCell.h"
 
+#import "ZMAXRecommendViewController.h"
+
 @interface ZMAXHomeViewController ()
 <
 UICollectionViewDelegate,
@@ -340,27 +342,32 @@ ZMAXHomeCollectionViewCellProtocol
 
 - (void)multifunctionCollectionViewCellDidTapLocationRecommendItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
 {
-    NSLog(@"[YJ] %@", @"1");
+    ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] initWithType:ZMAXRecommendTypeLOcationRecommend];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)multifunctionCollectionViewCellDidTapRecommendationPeportItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
 {
-    NSLog(@"[YJ] %@", @"2");
+    ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] initWithType:ZMAXRecommendTypeRecommendationPeport];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)multifunctionCollectionViewCellDidTapLocationRecordItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
 {
-    NSLog(@"[YJ] %@", @"3");
+    ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] initWithType:ZMAXRecommendTypeLocationRecord];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)multifunctionCollectionViewCellDidTapRecommendedBusinessItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
 {
-    NSLog(@"[YJ] %@", @"4");
+    ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] initWithType:ZMAXRecommendTypeRecommendedBusiness];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)multifunctionCollectionViewCellDidTapCompetitiveProductItemWithCell:(ZMAXMultifunctionCollectionViewCell *)cell
 {
-    NSLog(@"[YJ] %@", @"5");
+    ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] initWithType:ZMAXRecommendTypeCompetitiveProduct];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)mapCollectionViewCellDidTapWithCell:(ZMAXMapCollectionViewCell *)cell

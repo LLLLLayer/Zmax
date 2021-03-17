@@ -112,7 +112,7 @@
 {
     if (!_recommendView) {
         _recommendView = [[ZMAXTabBarImageIconView alloc] initWithNormalImage:[UIImage imageNamed:@"ZmaxIconDefault"]
-                                                                selectedImage:[UIImage imageNamed:@"ZmaxIcon"]];
+                                                                selectedImage:[UIImage imageNamed:@"ZmaxIconDefault"]];
         weakify(self);
         _recommendView.block = ^{
             strongify(weakSelf);
@@ -177,6 +177,15 @@
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(getCurrentType)]) {
         ZMAXTabBarType currentType = [self.delegate getCurrentType];
+        
+        if (type == ZMAXTabBarTypeRecommend) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(changeToType:)]) {
+                [self.delegate changeToType:type];
+            }
+            [[self __getViewWithType:type] changeToSeleted:YES animation:YES];
+            return;
+        }
+        
         if (currentType != type) {
             if (self.delegate && [self.delegate respondsToSelector:@selector(changeToType:)]) {
                 [self.delegate changeToType:type];

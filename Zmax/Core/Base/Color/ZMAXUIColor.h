@@ -27,6 +27,10 @@ FOUNDATION_EXPORT NSString * const ZMAXUIColorConstWhiteColor;
  品牌红色
  */
 FOUNDATION_EXPORT NSString * const ZMAXUIColorBrandRedColor;
+/*
+ 品牌蓝色
+ */
+FOUNDATION_EXPORT NSString * const ZMAXUIColorBrandBlueColor;
  /*
  通用视图背景色
  */

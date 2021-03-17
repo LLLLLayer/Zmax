@@ -20,6 +20,13 @@
 		7893670825D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893670725D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m */; };
 		7893671125D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */; };
 		7893671725D6549400AD98F1 /* ZMAXHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7893671625D6549400AD98F1 /* ZMAXHomeHeaderView.m */; };
+		789A77C025FF7F65000902FF /* ZMAXLocationRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77BF25FF7F65000902FF /* ZMAXLocationRecommendViewController.m */; };
+		789A77C625FF7F7C000902FF /* ZMAXLocationRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77C525FF7F7C000902FF /* ZMAXLocationRecordViewController.m */; };
+		789A77CC25FF7F91000902FF /* ZMAXEecommendationPeportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77CB25FF7F91000902FF /* ZMAXEecommendationPeportViewController.m */; };
+		789A77D225FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77D125FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.m */; };
+		789A77D825FF7FC1000902FF /* ZMAXCompetitiveProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77D725FF7FC1000902FF /* ZMAXCompetitiveProductViewController.m */; };
+		789A77DF25FF84FD000902FF /* ZMAXScrollHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77DE25FF84FD000902FF /* ZMAXScrollHeaderView.m */; };
+		789A77E72600B142000902FF /* ZMAXSelectDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A77E62600B142000902FF /* ZMAXSelectDisplayView.m */; };
 		78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22A2599CA5600E0CE10 /* AppDelegate.m */; };
 		78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A1E22D2599CA5600E0CE10 /* SceneDelegate.m */; };
 		78A1E2362599CA5600E0CE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A1E2352599CA5600E0CE10 /* Assets.xcassets */; };
@@ -42,6 +49,10 @@
 		78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D530B725A0A5D200D8C140 /* ZMAXNavigationBarView.m */; };
 		78EE6120259B61DA00EBC9CE /* ZMAXUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EE611F259B61DA00EBC9CE /* ZMAXUIColor.m */; };
 		78EE6125259B640900EBC9CE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78EE6124259B640900EBC9CE /* Colors.xcassets */; };
+		78F72F742600DD61001C2F5C /* ZMAXSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F72F732600DD61001C2F5C /* ZMAXSelectorViewController.m */; };
+		78F72F7D2600EBA8001C2F5C /* ZMAXSelectorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F72F7C2600EBA8001C2F5C /* ZMAXSelectorModel.m */; };
+		78F72F832600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F72F822600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.m */; };
+		78F72F892601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F72F882601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.m */; };
 		C4913F0BB5158F01E3A38DED /* libPods-Zmax.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDA9E9A55EED96EC71F884F /* libPods-Zmax.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +100,20 @@
 		7893671025D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXMultifunctionCollectionViewCell.m; sourceTree = "<group>"; };
 		7893671525D6549400AD98F1 /* ZMAXHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXHomeHeaderView.h; sourceTree = "<group>"; };
 		7893671625D6549400AD98F1 /* ZMAXHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXHomeHeaderView.m; sourceTree = "<group>"; };
+		789A77BE25FF7F64000902FF /* ZMAXLocationRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXLocationRecommendViewController.h; sourceTree = "<group>"; };
+		789A77BF25FF7F65000902FF /* ZMAXLocationRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXLocationRecommendViewController.m; sourceTree = "<group>"; };
+		789A77C425FF7F7C000902FF /* ZMAXLocationRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXLocationRecordViewController.h; sourceTree = "<group>"; };
+		789A77C525FF7F7C000902FF /* ZMAXLocationRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXLocationRecordViewController.m; sourceTree = "<group>"; };
+		789A77CA25FF7F91000902FF /* ZMAXEecommendationPeportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXEecommendationPeportViewController.h; sourceTree = "<group>"; };
+		789A77CB25FF7F91000902FF /* ZMAXEecommendationPeportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXEecommendationPeportViewController.m; sourceTree = "<group>"; };
+		789A77D025FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXEecommendedBusinessViewController.h; sourceTree = "<group>"; };
+		789A77D125FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXEecommendedBusinessViewController.m; sourceTree = "<group>"; };
+		789A77D625FF7FC1000902FF /* ZMAXCompetitiveProductViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXCompetitiveProductViewController.h; sourceTree = "<group>"; };
+		789A77D725FF7FC1000902FF /* ZMAXCompetitiveProductViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXCompetitiveProductViewController.m; sourceTree = "<group>"; };
+		789A77DD25FF84FD000902FF /* ZMAXScrollHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXScrollHeaderView.h; sourceTree = "<group>"; };
+		789A77DE25FF84FD000902FF /* ZMAXScrollHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXScrollHeaderView.m; sourceTree = "<group>"; };
+		789A77E52600B142000902FF /* ZMAXSelectDisplayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSelectDisplayView.h; sourceTree = "<group>"; };
+		789A77E62600B142000902FF /* ZMAXSelectDisplayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSelectDisplayView.m; sourceTree = "<group>"; };
 		78A1E2262599CA5600E0CE10 /* Zmax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zmax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A1E2292599CA5600E0CE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78A1E22A2599CA5600E0CE10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +159,14 @@
 		78EE611E259B61DA00EBC9CE /* ZMAXUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXUIColor.h; sourceTree = "<group>"; };
 		78EE611F259B61DA00EBC9CE /* ZMAXUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXUIColor.m; sourceTree = "<group>"; };
 		78EE6124259B640900EBC9CE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		78F72F722600DD61001C2F5C /* ZMAXSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSelectorViewController.h; sourceTree = "<group>"; };
+		78F72F732600DD61001C2F5C /* ZMAXSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSelectorViewController.m; sourceTree = "<group>"; };
+		78F72F7B2600EBA8001C2F5C /* ZMAXSelectorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSelectorModel.h; sourceTree = "<group>"; };
+		78F72F7C2600EBA8001C2F5C /* ZMAXSelectorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSelectorModel.m; sourceTree = "<group>"; };
+		78F72F812600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSelectorCollectionViewCell.h; sourceTree = "<group>"; };
+		78F72F822600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSelectorCollectionViewCell.m; sourceTree = "<group>"; };
+		78F72F872601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMAXSelectorCollectionHeaderView.h; sourceTree = "<group>"; };
+		78F72F882601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAXSelectorCollectionHeaderView.m; sourceTree = "<group>"; };
 		884E8B81E3B5B2313E6ED199 /* Pods-Zmax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zmax.debug.xcconfig"; path = "Target Support Files/Pods-Zmax/Pods-Zmax.debug.xcconfig"; sourceTree = "<group>"; };
 		BEDA9E9A55EED96EC71F884F /* libPods-Zmax.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zmax.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF236983E7531DC1B6767DE9 /* Pods-Zmax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zmax.release.xcconfig"; path = "Target Support Files/Pods-Zmax/Pods-Zmax.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +271,9 @@
 		78422A7D25B45FAB0027D881 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				78F72F712600DD18001C2F5C /* Selector */,
+				789A77E42600B11B000902FF /* SelectdDisplay */,
+				789A77DC25FF84C9000902FF /* ScrollView */,
 				783A5CA725D152440076C9DB /* UIKit */,
 				783A5C8425D11FFF0076C9DB /* ZMAXBaseNavigationController.h */,
 				783A5C8525D11FFF0076C9DB /* ZMAXBaseNavigationController.m */,
@@ -304,6 +340,33 @@
 				78EE6124259B640900EBC9CE /* Colors.xcassets */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		789A77DC25FF84C9000902FF /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				789A77DD25FF84FD000902FF /* ZMAXScrollHeaderView.h */,
+				789A77DE25FF84FD000902FF /* ZMAXScrollHeaderView.m */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		789A77E32600B07A000902FF /* LocationRecommend */ = {
+			isa = PBXGroup;
+			children = (
+				789A77BE25FF7F64000902FF /* ZMAXLocationRecommendViewController.h */,
+				789A77BF25FF7F65000902FF /* ZMAXLocationRecommendViewController.m */,
+			);
+			path = LocationRecommend;
+			sourceTree = "<group>";
+		};
+		789A77E42600B11B000902FF /* SelectdDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				789A77E52600B142000902FF /* ZMAXSelectDisplayView.h */,
+				789A77E62600B142000902FF /* ZMAXSelectDisplayView.m */,
+			);
+			path = SelectdDisplay;
 			sourceTree = "<group>";
 		};
 		78A1E21D2599CA5600E0CE10 = {
@@ -426,8 +489,17 @@
 		78D5309125A06C9300D8C140 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				789A77E32600B07A000902FF /* LocationRecommend */,
 				78D530A325A092DD00D8C140 /* ZMAXRecommendViewController.h */,
 				78D530A425A092DD00D8C140 /* ZMAXRecommendViewController.m */,
+				789A77C425FF7F7C000902FF /* ZMAXLocationRecordViewController.h */,
+				789A77C525FF7F7C000902FF /* ZMAXLocationRecordViewController.m */,
+				789A77CA25FF7F91000902FF /* ZMAXEecommendationPeportViewController.h */,
+				789A77CB25FF7F91000902FF /* ZMAXEecommendationPeportViewController.m */,
+				789A77D025FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.h */,
+				789A77D125FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.m */,
+				789A77D625FF7FC1000902FF /* ZMAXCompetitiveProductViewController.h */,
+				789A77D725FF7FC1000902FF /* ZMAXCompetitiveProductViewController.m */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -458,6 +530,21 @@
 				78D530B725A0A5D200D8C140 /* ZMAXNavigationBarView.m */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		78F72F712600DD18001C2F5C /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				78F72F722600DD61001C2F5C /* ZMAXSelectorViewController.h */,
+				78F72F732600DD61001C2F5C /* ZMAXSelectorViewController.m */,
+				78F72F7B2600EBA8001C2F5C /* ZMAXSelectorModel.h */,
+				78F72F7C2600EBA8001C2F5C /* ZMAXSelectorModel.m */,
+				78F72F812600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.h */,
+				78F72F822600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.m */,
+				78F72F872601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.h */,
+				78F72F882601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.m */,
+			);
+			path = Selector;
 			sourceTree = "<group>";
 		};
 		92E9F147AD57FB795C0FFC10 /* Pods */ = {
@@ -670,8 +757,11 @@
 			files = (
 				78D530A525A092DD00D8C140 /* ZMAXRecommendViewController.m in Sources */,
 				78422A7925B417A00027D881 /* ZMAXSettingCollectionViewCell.m in Sources */,
+				789A77CC25FF7F91000902FF /* ZMAXEecommendationPeportViewController.m in Sources */,
 				7893670825D2C66800AD98F1 /* NSDictionary+ZMAXAdditions.m in Sources */,
+				789A77DF25FF84FD000902FF /* ZMAXScrollHeaderView.m in Sources */,
 				78A1E22B2599CA5600E0CE10 /* AppDelegate.m in Sources */,
+				789A77C625FF7F7C000902FF /* ZMAXLocationRecordViewController.m in Sources */,
 				78D1246925D68678001685AD /* ZMAXMapCollectionViewCell.m in Sources */,
 				78D530B825A0A5D200D8C140 /* ZMAXNavigationBarView.m in Sources */,
 				783A5CBB25D26E2C0076C9DB /* ZMAXLocationManager.m in Sources */,
@@ -681,21 +771,29 @@
 				78D530B125A092F900D8C140 /* ZMAXMineViewController.m in Sources */,
 				78EE6120259B61DA00EBC9CE /* ZMAXUIColor.m in Sources */,
 				78D530AB25A092EB00D8C140 /* ZMAXMessageViewController.m in Sources */,
+				789A77D225FF7FAA000902FF /* ZMAXEecommendedBusinessViewController.m in Sources */,
+				78F72F742600DD61001C2F5C /* ZMAXSelectorViewController.m in Sources */,
 				78D5309925A092A600D8C140 /* ZMAXHomeViewController.m in Sources */,
 				78D53085259F41FF00D8C140 /* ZMAXTabBarImageIconView.m in Sources */,
 				78D5307F259F418300D8C140 /* ZMAXTabBarGeneralIconView.m in Sources */,
 				78422A8125B460060027D881 /* ZMAXPromptPopupViewController.m in Sources */,
+				789A77E72600B142000902FF /* ZMAXSelectDisplayView.m in Sources */,
 				7893671725D6549400AD98F1 /* ZMAXHomeHeaderView.m in Sources */,
 				783A5CAE25D2504E0076C9DB /* ZMAXCycleScrollCollectionViewCell.m in Sources */,
 				783A5C8625D11FFF0076C9DB /* ZMAXBaseNavigationController.m in Sources */,
 				78D5309F25A092BB00D8C140 /* ZMAXFunctionViewController.m in Sources */,
 				78D3CF7025F76C3800D3674B /* ZMAXCustomerServiceCell.m in Sources */,
 				783A5C7425D0F1D30076C9DB /* ZMAXAppInitialization.m in Sources */,
+				789A77D825FF7FC1000902FF /* ZMAXCompetitiveProductViewController.m in Sources */,
+				78F72F832600F2DA001C2F5C /* ZMAXSelectorCollectionViewCell.m in Sources */,
 				7893671125D50F1200AD98F1 /* ZMAXMultifunctionCollectionViewCell.m in Sources */,
 				78A1E23C2599CA5600E0CE10 /* main.m in Sources */,
+				789A77C025FF7F65000902FF /* ZMAXLocationRecommendViewController.m in Sources */,
+				78F72F7D2600EBA8001C2F5C /* ZMAXSelectorModel.m in Sources */,
 				783A5C6125D0DF010076C9DB /* ZMAXUserDefaults.m in Sources */,
 				783A5CC225D2A38B0076C9DB /* ZMAXNetwork.m in Sources */,
 				78D53079259DC35100D8C140 /* ZMAXTabBarView.m in Sources */,
+				78F72F892601AF9D001C2F5C /* ZMAXSelectorCollectionHeaderView.m in Sources */,
 				78A1E22E2599CA5600E0CE10 /* SceneDelegate.m in Sources */,
 				78422A7025A320820027D881 /* ZMAXSettingViewController.m in Sources */,
 			);

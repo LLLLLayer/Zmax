@@ -9,7 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, ZMAXRecommendType) {
+    ZMAXRecommendTypeLOcationRecommend = 0,
+    ZMAXRecommendTypeRecommendationPeport,
+    ZMAXRecommendTypeLocationRecord,
+    ZMAXRecommendTypeRecommendedBusiness,
+    ZMAXRecommendTypeCompetitiveProduct,
+};
+
 @interface ZMAXRecommendViewController : UIViewController
+
+- (instancetype)initWithType:(ZMAXRecommendType)type;
 
 @end
 

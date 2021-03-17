@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, ZMAXNavigationBarType) {
 @interface ZMAXNavigationBarView : UIView
 
 - (instancetype)initWithStyle:(ZMAXNavigationBarStyle)style;
+- (instancetype)initWithStyle:(ZMAXNavigationBarStyle)style ignoreSafeTop:(BOOL)ignore;
 
 - (void)addTitle:(NSString *)title action:(ZMAXNavigationBarLabelAction)action;
 - (void)changeTitle:(NSString *)title;

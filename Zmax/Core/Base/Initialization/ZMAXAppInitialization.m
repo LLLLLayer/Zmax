@@ -15,7 +15,6 @@
 + (void)appItialization
 {
     [ZMAXAppInitialization __itializationUserInterfaceStyle];
-
 }
 
 + (void)__itializationUserInterfaceStyle

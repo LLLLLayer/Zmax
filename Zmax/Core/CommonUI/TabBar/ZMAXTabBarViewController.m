@@ -22,7 +22,7 @@
 @property (nonatomic, strong) ZMAXTabBarView *tabBarView;
 @property (nonatomic, strong) ZMAXHomeViewController *homeViewController;
 @property (nonatomic, strong) ZMAXFunctionViewController *functionViewController;
-@property (nonatomic, strong) ZMAXRecommendViewController *recommendViewController;
+//@property (nonatomic, strong) ZMAXRecommendViewController *recommendViewController;
 @property (nonatomic, strong) ZMAXMessageViewController *messageViewController;
 @property (nonatomic, strong) ZMAXMineViewController *mineViewController;
 
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     self.viewControllers = @[self.homeViewController,
                              self.functionViewController,
-                             self.recommendViewController,
+                             [[UIViewController alloc] init], // self.recommendViewController,
                              self.messageViewController,
                              self.mineViewController];
     [self __setupUI];
@@ -82,13 +82,13 @@
     return _functionViewController;
 }
 
-- (ZMAXRecommendViewController *)recommendViewController
-{
-    if (!_recommendViewController) {
-        _recommendViewController = [[ZMAXRecommendViewController alloc] init];
-    }
-    return _recommendViewController;
-}
+//- (ZMAXRecommendViewController *)recommendViewController
+//{
+//    if (!_recommendViewController) {
+//        _recommendViewController = [[ZMAXRecommendViewController alloc] init];
+//    }
+//    return _recommendViewController;
+//}
 
 - (ZMAXMessageViewController *)messageViewController
 {
@@ -115,6 +115,11 @@
 
 - (void)changeToType:(ZMAXTabBarType)type
 {
+    if (type == ZMAXTabBarTypeRecommend) {
+        ZMAXRecommendViewController *vc = [[ZMAXRecommendViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+        return;
+    }
     if (self.selectedIndex != type) {
         self.selectedIndex = type;
     }
