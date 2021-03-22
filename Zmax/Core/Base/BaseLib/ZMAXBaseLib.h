@@ -34,5 +34,7 @@
 
 + (UIViewController *)getTopController;
 
++ (void)toast:(NSString *)text;
++ (void)toastDefaultError;
 @end
 

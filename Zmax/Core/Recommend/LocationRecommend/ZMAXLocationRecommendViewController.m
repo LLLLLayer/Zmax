@@ -12,10 +12,14 @@
 #import "ZMAXBaseLib.h"
 #import "ZMAXUIColor.h"
 #import "ZMAXUserDefaults.h"
+#import "ZMAXNetwork.h"
+#import "NSDictionary+ZMAXAdditions.h"
+#import "ZMAXLocationRecommendAnalysisModel.h"
 
 #import "ZMAXLocationRecommendViewController.h"
 #import "ZMAXNavigationBarView.h"
 #import "ZMAXSelectDisplayView.h"
+#import "ZMAXRecommendationPeportDetailViewController.h"
 
 #import "ZMAXSelectorModel.h"
 #import "ZMAXSelectorViewController.h"
@@ -33,6 +37,9 @@ static const CGFloat kZMAXRecommendViewCardHeight = 180;
 @property (nonatomic, strong) ZMAXSelectDisplayView *cityDisplayView;
 @property (nonatomic, strong) ZMAXSelectDisplayView *industryDisplayView;
 @property (nonatomic, strong) UIButton *recommendButton;
+
+@property (nonatomic, strong) NSArray *citysArray;
+@property (nonatomic, strong) NSArray *industryArray;
 
 @end
 
@@ -146,15 +153,25 @@ static const CGFloat kZMAXRecommendViewCardHeight = 180;
             strongify(weakSelf);
             ZMAXSelectorModel *model = [[ZMAXSelectorModel alloc] init];
             model.title = @"城市";
-            model.itemsArray = @[@"广州", @"深圳"];
-            model.action = ^(NSString * _Nonnull selected) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            [ZMAXNetwork getLocationRecommendCityWithComplation:^(BOOL success, NSDictionary *response) {
                 strongify(weakSelf);
-                if (selected && selected.length) {
-                    [strongSelf.cityDisplayView setTitleWithText:selected];
+                [hud hideAnimated:YES];
+                if (success) {
+                    model.itemsArray = [response zmax_arrayValueForKey:@"citys"];
+                    model.action = ^(NSString * _Nonnull selected) {
+                        strongify(weakSelf);
+                        if (selected && selected.length) {
+                            [strongSelf.cityDisplayView setTitleWithText:selected];
+                        }
+                    };
+                    ZMAXSelectorViewController *vc = [[ZMAXSelectorViewController alloc] initWithSelectorModel:model];
+                    [strongSelf presentViewController:vc animated:NO completion:nil];
+                } else {
+                    [ZMAXBaseLib toastDefaultError];
                 }
-            };
-            ZMAXSelectorViewController *vc = [[ZMAXSelectorViewController alloc] initWithSelectorModel:model];
-            [strongSelf presentViewController:vc animated:NO completion:nil];
+            }];
         };
     }
     return _cityDisplayView;
@@ -181,15 +198,25 @@ static const CGFloat kZMAXRecommendViewCardHeight = 180;
             strongify(weakSelf);
             ZMAXSelectorModel *model = [[ZMAXSelectorModel alloc] init];
             model.title = @"行业";
-            model.itemsArray = @[@"奶茶"];
-            model.action = ^(NSString * _Nonnull selected) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:strongSelf.view animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            [ZMAXNetwork getLocationRecommendIndustryLabelWithComplation:^(BOOL success, NSDictionary *response) {
                 strongify(weakSelf);
-                if (selected && selected.length) {
-                    [strongSelf.industryDisplayView setTitleWithText:selected];
+                [hud hideAnimated:YES];
+                if (success) {
+                    model.itemsArray = [response zmax_arrayValueForKey:@"industrys"];
+                    model.action = ^(NSString * _Nonnull selected) {
+                        strongify(weakSelf);
+                        if (selected && selected.length) {
+                            [strongSelf.industryDisplayView setTitleWithText:selected];
+                        }
+                    };
+                    ZMAXSelectorViewController *vc = [[ZMAXSelectorViewController alloc] initWithSelectorModel:model];
+                    [strongSelf presentViewController:vc animated:NO completion:nil];
+                } else {
+                    [ZMAXBaseLib toastDefaultError];
                 }
-            };
-            ZMAXSelectorViewController *vc = [[ZMAXSelectorViewController alloc] initWithSelectorModel:model];
-            [strongSelf presentViewController:vc animated:NO completion:nil];
+            }];
         };
     }
     return _industryDisplayView;
@@ -247,12 +274,34 @@ static const CGFloat kZMAXRecommendViewCardHeight = 180;
     NSString *city = [self.cityDisplayView getTitle];
     NSString *industry = [self.industryDisplayView getTitle];
     if (!city || !city.length || !industry || !industry.length || [city isEqualToString:@"请选择"] || [industry isEqualToString:@"请选择"]) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.label.text = @"请完成选择！";
-        [hud hideAnimated:YES afterDelay:1.5];
+        [ZMAXBaseLib toast:@"请完成选择！"];
         return;
     }
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    NSDictionary *params = @{@"city" : [self.cityDisplayView getTitle] ?: @"",
+                             @"industry" : [self.industryDisplayView getTitle] ?: @"",
+                             @"minIndex" : @"1",
+                             @"maxIndex" : @"1000"};
+    weakify(self);
+    [ZMAXNetwork getLocationRecommendAnalysisWithParams:params complation:^(BOOL success, NSDictionary *response) {
+        strongify(weakSelf);
+        [hud hideAnimated:YES];
+        if (success) {
+            ZMAXLocationRecommendAnalysisModel *model = [[ZMAXLocationRecommendAnalysisModel alloc] init];
+            model.ID = [response zmax_stringValueForKey:@"ID"];
+            model.time = [response zmax_stringValueForKey:@"currentTime"];
+            model.city = [response zmax_stringValueForKey:@"city"];
+            model.industry = [response zmax_stringValueForKey:@"industry"];
+            model.imageUrl = [response zmax_stringValueForKey:@"imageUrl"];
+            model.analysisArray = [response zmax_arrayValueForKey:@"data"];
+            [ZMAXUserDefaults addAnalysisModel:model];
+            ZMAXRecommendationPeportDetailViewController *vc = [[ZMAXRecommendationPeportDetailViewController alloc] initWithModel:model];
+            [strongSelf.presentingViewController.navigationController pushViewController:vc animated:YES];
+        } else {
+            [ZMAXBaseLib toastDefaultError];
+        }
+    }];
     
 }
 

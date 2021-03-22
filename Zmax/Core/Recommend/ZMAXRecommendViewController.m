@@ -11,12 +11,12 @@
 #import "ZMAXRecommendViewController.h"
 #import "ZMAXLocationRecommendViewController.h"
 #import "ZMAXLocationRecordViewController.h"
-#import "ZMAXEecommendationPeportViewController.h"
-#import "ZMAXEecommendedBusinessViewController.h"
+#import "ZMAXRecommendationReportViewController.h"
+#import "ZMAXRecommendedBusinessViewController.h"
 #import "ZMAXCompetitiveProductViewController.h"
 #import "ZMAXScrollHeaderView.h"
 
-@interface ZMAXRecommendViewController () <UIScrollViewDelegate>
+@interface ZMAXRecommendViewController () <UIScrollViewDelegate, ZMAXRecommendViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *pagesArray;
 
@@ -27,8 +27,8 @@
 
 @property (nonatomic, strong) ZMAXLocationRecommendViewController *locationRecommendVC;
 @property (nonatomic, strong) ZMAXLocationRecordViewController *locationRecordVC;
-@property (nonatomic, strong) ZMAXEecommendationPeportViewController *recommendationPeportVC;
-@property (nonatomic, strong) ZMAXEecommendedBusinessViewController *recommendedBusinessVC;
+@property (nonatomic, strong) ZMAXRecommendationReportViewController *recommendationPeportVC;
+@property (nonatomic, strong) ZMAXRecommendedBusinessViewController *recommendedBusinessVC;
 @property (nonatomic, strong) ZMAXCompetitiveProductViewController *competitiveProductVC;
 
 @end
@@ -91,16 +91,17 @@
         strongSelf.scrollView.contentOffset = [strongSelf __getContentOffsetWithType:ZMAXRecommendTypeLOcationRecommend];
     }];
     
-    [self addChildViewController:self.locationRecordVC];
-    [self.headerView addHeaderWithText:[[self.locationRecordVC class] functionDescription]
+    [self addChildViewController:self.recommendationPeportVC];
+    [self.headerView addHeaderWithText:[[self.recommendationPeportVC class] functionDescription]
                                  index:ZMAXRecommendTypeRecommendationPeport
                                 action:^{
         strongify(weakSelf);
         strongSelf.scrollView.contentOffset = [strongSelf __getContentOffsetWithType:ZMAXRecommendTypeRecommendationPeport];
+        [strongSelf.recommendationPeportVC fetchData];
     }];
     
-    [self addChildViewController:self.recommendationPeportVC];
-    [self.headerView addHeaderWithText:[[self.recommendationPeportVC class] functionDescription]
+    [self addChildViewController:self.locationRecordVC];
+    [self.headerView addHeaderWithText:[[self.locationRecordVC class] functionDescription]
                                  index:ZMAXRecommendTypeLocationRecord
                                 action:^{
         strongify(weakSelf);
@@ -195,6 +196,15 @@
     return _locationRecommendVC;
 }
 
+- (ZMAXRecommendationReportViewController *)recommendationPeportVC
+{
+    if (!_recommendationPeportVC) {
+        _recommendationPeportVC = [[ZMAXRecommendationReportViewController alloc] init];
+        _recommendationPeportVC.delegate = self;
+    }
+    return _recommendationPeportVC;
+}
+
 - (ZMAXLocationRecordViewController *)locationRecordVC
 {
     if (!_locationRecordVC) {
@@ -203,18 +213,10 @@
     return _locationRecordVC;
 }
 
-- (ZMAXEecommendationPeportViewController *)recommendationPeportVC
-{
-    if (!_recommendationPeportVC) {
-        _recommendationPeportVC = [[ZMAXEecommendationPeportViewController alloc] init];
-    }
-    return _recommendationPeportVC;
-}
-
-- (ZMAXEecommendedBusinessViewController *)recommendedBusinessVC
+- (ZMAXRecommendedBusinessViewController *)recommendedBusinessVC
 {
     if (!_recommendedBusinessVC) {
-        _recommendedBusinessVC = [[ZMAXEecommendedBusinessViewController alloc] init];
+        _recommendedBusinessVC = [[ZMAXRecommendedBusinessViewController alloc] init];
     }
     return _recommendedBusinessVC;
 }
@@ -257,4 +259,24 @@
     }
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    NSInteger page = (scrollView.contentOffset.x + SCREEN_WIDTH * 0.5) / SCREEN_WIDTH; // 当前页数
+    for (NSInteger i = page - 1; i <= page + 1; i++) {
+        if (i == ZMAXRecommendTypeRecommendationPeport) {
+            [self.recommendationPeportVC fetchData];
+        }
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+}
+
+#pragma mark - ZMAXRecommendViewControllerDelegate
+
+- (CGFloat)topY
+{
+    return CGRectGetMaxY(self.headerView.frame) + 3.0;
+}
 @end

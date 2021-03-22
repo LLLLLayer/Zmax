@@ -1,24 +1,24 @@
 //
-//  ZMAXEecommendationPeportViewController.m
+//  ZMAXEecommendedBusinessViewController.m
 //  Zmax
 //
 //  Created by 杨杰 on 2021/3/15.
 //
 
-#import "ZMAXEecommendationPeportViewController.h"
+#import "ZMAXRecommendedBusinessViewController.h"
 #import "ZMAXNavigationBarView.h"
 
-@interface ZMAXEecommendationPeportViewController ()
+@interface ZMAXRecommendedBusinessViewController ()
 
 @property (nonatomic, strong) ZMAXNavigationBarView *navigationBarView;
 
 @end
 
-@implementation ZMAXEecommendationPeportViewController
+@implementation ZMAXRecommendedBusinessViewController
 
 + (NSString *)functionDescription
 {
-    return @"考察记录";
+    return @"商机推荐";
 }
 
 - (void)__setupUI

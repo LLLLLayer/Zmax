@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class ZMAXLocationRecommendAnalysisModel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZMAXUserDefaults : NSObject
@@ -18,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setIsCurrentUserInterfaceStyleWithSystem:(BOOL)isCurrentUserInterfaceStyleWithSystem;
 
 + (BOOL)isCurrentUserInterfaceStyleWithSystem;
+
++ (void)addAnalysisModel:(ZMAXLocationRecommendAnalysisModel *)model;
++ (ZMAXLocationRecommendAnalysisModel *)getAlysisModelWithID:(NSString *)ID;
++ (void)deleteAlysisModelWithID:(NSString *)ID;
++ (NSArray<ZMAXLocationRecommendAnalysisModel *> *)getAllAlysisModel;
 
 @end
 

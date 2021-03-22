@@ -13,5 +13,11 @@
 
 + (void)getWeatherWithParams:(NSDictionary *)params complation:(void(^)(BOOL success, NSDictionary * response))complation;
 
++ (void)getLocationRecommendCityWithComplation:(void(^)(BOOL success, NSDictionary * response))complation;
+
++ (void)getLocationRecommendIndustryLabelWithComplation:(void(^)(BOOL success, NSDictionary * response))complation;
+
++ (void)getLocationRecommendAnalysisWithParams:(NSDictionary *)params complation:(void(^)(BOOL success, NSDictionary * response))complation;
+
 @end
 

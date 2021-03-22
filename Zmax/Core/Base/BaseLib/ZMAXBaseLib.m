@@ -6,6 +6,7 @@
 //
 
 #import "ZMAXBaseLib.h"
+#import "MBProgressHUD.h"
 
 @implementation ZMAXBaseLib
 
@@ -42,6 +43,21 @@
         return viewController;
     }
     return nil;
+}
+
++ (void)toast:(NSString *)text
+{
+    if (text && text.length) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[ZMAXBaseLib getTopController].view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.label.text = text;
+        [hud hideAnimated:YES afterDelay:1.5];
+    }
+}
+
++ (void)toastDefaultError
+{
+    [ZMAXBaseLib toast:@"网络错误，请稍后重试！"];
 }
 
 @end

@@ -52,9 +52,6 @@
 {
     self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     self.view.backgroundColor = [UIColor clearColor];
-//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__dismiss)];
-//    [self.view addGestureRecognizer:gesture];
-    
     [self.view addSubview:self.maskView];
     self.maskView.frame = CGRectMake(0.0, 0.0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
@@ -62,7 +59,7 @@
     self.baseView.frame = CGRectMake(0.0,
                                      SCREEN_HEIGHT,
                                      SCREEN_WIDTH,
-                                     SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT * 2 - SAFE_TOP);
+                                     SCREEN_HEIGHT - 120.0);
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.baseView.bounds
                                                byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight
                                                      cornerRadii:CGSizeMake(20, 20)];

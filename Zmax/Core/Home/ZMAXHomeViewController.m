@@ -27,6 +27,8 @@
 
 #import "ZMAXRecommendViewController.h"
 
+static BOOL aminationFlag = NO;
+
 @interface ZMAXHomeViewController ()
 <
 UICollectionViewDelegate,
@@ -62,10 +64,22 @@ ZMAXHomeCollectionViewCellProtocol
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [[ZMAXLocationManager sharedInstance] start];
+    [self.collectionView reloadData];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            aminationFlag = YES;
+        });
+    });
 }
 
 - (void)__setupUI
@@ -304,6 +318,28 @@ ZMAXHomeCollectionViewCellProtocol
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!aminationFlag) {
+        CGFloat translationX = (indexPath.section % 2 ? -1 : 1) * -1 * SCREEN_WIDTH;
+        cell.contentView.transform = CGAffineTransformMakeTranslation(translationX, 0.0);
+        [UIView animateWithDuration:0.5 animations:^{
+            cell.contentView.transform = CGAffineTransformIdentity;
+        }];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath
+{
+    if (!aminationFlag) {
+        CGFloat translationX = (indexPath.section % 2 ? -1 : 1) * -1 * SCREEN_WIDTH;
+        view.transform = CGAffineTransformMakeTranslation(translationX, 0.0);
+        [UIView animateWithDuration:0.5 animations:^{
+            view.transform = CGAffineTransformIdentity;
+        }];
+    }
+}
+
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
     [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:ZMAXHomeFunctionTypeMapView]]];
@@ -316,7 +352,6 @@ ZMAXHomeCollectionViewCellProtocol
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
                                                                      refreshingAction:@selector(__fetchData)];
     self.collectionView.mj_header = header;
-    [self.collectionView.mj_header beginRefreshing];
     
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
                                                                              refreshingAction:@selector(__loadMore)];
@@ -325,7 +360,9 @@ ZMAXHomeCollectionViewCellProtocol
 
 - (void)__fetchData
 {
-    [self.collectionView.mj_header endRefreshing];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.collectionView.mj_header endRefreshing];
+    });
 }
 
 - (void)__loadMore

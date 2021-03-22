@@ -18,7 +18,7 @@
 
 + (NSString *)functionDescription
 {
-    return @"推荐报告";
+    return @"考察记录";
 }
 
 - (void)__setupUI
